@@ -8,7 +8,7 @@
 </style>
 
 
-    <style name="TextOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="TextOutlined" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
         <item name="android:textColor">@color/colorPrimarioOscuro</item>
         <item name="cornerRadius">30dp</item>
         <item name="strokeColor">@color/colorAcento</item>

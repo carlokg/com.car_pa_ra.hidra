@@ -27,7 +27,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etNomUsuario"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomUsuario"
         android:layout_margin="16dp"
+        style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -67,6 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
         android:layout_margin="16dp"
+        style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -83,6 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw"
         android:layout_margin="16dp"
+        style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -99,6 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw2"
         android:layout_margin="16dp"
+        style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -115,6 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDir"
         android:layout_margin="16dp"
+        style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -132,7 +137,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_registro"
         app:layout_constraintTop_toBottomOf="@id/etDesc"
-        android:layout_margin="16dp">
+        android:layout_margin="16dp"
+        style="@style/HidraButton">
 
     </com.google.android.material.button.MaterialButton>
 
