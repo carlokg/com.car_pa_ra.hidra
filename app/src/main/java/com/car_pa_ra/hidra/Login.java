@@ -18,7 +18,7 @@ public class Login extends AppCompatActivity {
             setContentView(R.layout.activity_login);
             imgLogin = findViewById(R.id.imgLogin);
 
-            Glide.with(this).load(R.drawable.ic_icon).circleCrop().into(imgLogin);
+            Glide.with(this).load(R.drawable.ic_icon).into(imgLogin);
         }
 
 
