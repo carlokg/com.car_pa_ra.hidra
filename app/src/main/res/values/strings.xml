@@ -8,4 +8,6 @@
     <string name="hint_dir">Dirección</string>
     <string name="hint_desc">Cuéntanos un poco sobre tí</string>
     <string name="btn_registro">Regístrate</string>
+    <string name="tv_iniciar">Iniciar Sesión</string>
+    <string name="btn_entrar">Entrar</string>
 </resources>
