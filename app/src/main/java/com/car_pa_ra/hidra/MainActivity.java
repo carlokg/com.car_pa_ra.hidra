@@ -1,10 +1,15 @@
 package com.car_pa_ra.hidra;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,12 +18,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String text = "Hola";
-        //HOLA
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AlgorithmFragment()).commit();
+
     }
 
-    public void aa(View view) {
-        Intent i = new Intent(this, Registro.class);
-        startActivity(i);
-    }
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            Fragment selectedFragment = null;
+            switch (item.getItemId()) {
+                case R.id.explora:
+                    //selectedFragment = new AlgorithmFragment();
+                    break;
+                case R.id.social:
+                    ///selectedFragment = new CourseFragment();
+                    break;
+                case R.id.perfil:
+                    //selectedFragment = new ProfileFragment();
+                    break;
+                case R.id.ayuda:
+                    //selectedFragment = new ProfileFragment();
+                    break;
+                case R.id.config:
+                    //selectedFragment = new ProfileFragment();
+                    break;
+            }
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, selectedFragment)
+                    .commit();
+            return true;
+        }
+    };
+
 }

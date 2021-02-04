@@ -10,4 +10,9 @@
     <string name="btn_registro">Regístrate</string>
     <string name="tv_iniciar">Iniciar Sesión</string>
     <string name="btn_entrar">Entrar</string>
+    <string name="explora">Explora</string>
+    <string name="social">Social</string>
+    <string name="perfil">Perfil</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="ajustes">Ajustes</string>
 </resources>
