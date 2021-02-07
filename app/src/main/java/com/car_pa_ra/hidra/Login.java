@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
 
     public void btnEntrar(View view) {
             Intent iExplora = new Intent(this, MainActivity.class);
-            startActivity(iExplora);
+            startActivity(iExplora);//a
     }
 
     public void btnRegistro(View view) {
