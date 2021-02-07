@@ -15,4 +15,6 @@
     <string name="perfil">Perfil</string>
     <string name="ayuda">Ayuda</string>
     <string name="ajustes">Ajustes</string>
+    <string name="no_data">Debe introducir un email y una contraseña</string>
+    <string name="msj_no_accede">No se ha podido acceder</string>
 </resources>
