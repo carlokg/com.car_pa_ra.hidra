@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,8 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login extends AppCompatActivity {
 
         ImageView imgLogin;
-        EditText etNomUsuario;
-        EditText etPw;
+        TextInputLayout etNomUsuario;
+        TextInputLayout etPw;
         Button btnRegistrarse;
         private FirebaseAuth fba;
         private FirebaseUser user;
@@ -42,15 +43,15 @@ public class Login extends AppCompatActivity {
             Glide.with(this).load(R.drawable.ic_icon).into(imgLogin);
 
             if (user != null) {
-                etNomUsuario.setText(user.getEmail());
+                etNomUsuario.getEditText().setText(user.getEmail());
                 btnRegistrarse.setEnabled(false);
             }
         }
 
 
     public void btnEntrar(View view) {
-        String email = etNomUsuario.getText().toString().trim();
-        String password = etPw.getText().toString().trim();
+        String email = etNomUsuario.getEditText().getText().toString().trim();
+        String password = etPw.getEditText().getText().toString().trim();
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, getString(R.string.no_data),
                     Toast.LENGTH_LONG).show();

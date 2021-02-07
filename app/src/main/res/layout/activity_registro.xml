@@ -137,7 +137,8 @@
         android:text="@string/btn_registro"
         app:layout_constraintTop_toBottomOf="@id/etDesc"
         android:layout_margin="16dp"
-        style="@style/HidraButton">
+        style="@style/HidraButton"
+        android:onClick="btnRegistrar">
 
     </com.google.android.material.button.MaterialButton>
 

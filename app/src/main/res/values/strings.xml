@@ -17,4 +17,7 @@
     <string name="ajustes">Ajustes</string>
     <string name="no_data">Debe introducir un email y una contraseña</string>
     <string name="msj_no_accede">No se ha podido acceder</string>
+    <string name="msj_registrado">Usuario registrado</string>
+    <string name="msj_no_registrado">No se ha podido registrar el usuario</string>
+    <string name="msj_pw_iguales">Las contraseñas introducidas no coinciden</string>
 </resources>
