@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
-        ImageView imgLogin;
+        ImageView imgLogin;//aj
         TextInputLayout etNomUsuario;
         TextInputLayout etPw;
         Button btnRegistrarse;
