@@ -20,4 +20,9 @@
     <string name="msj_registrado">Usuario registrado</string>
     <string name="msj_no_registrado">No se ha podido registrar el usuario</string>
     <string name="msj_pw_iguales">Las contraseñas introducidas no coinciden</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_about">About Us</string>
+    <string name="btn_logout">Log out</string>
+    <string name="btn_help">Ayuda</string>
 </resources>
