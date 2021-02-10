@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp32">232dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="sp8">8sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="sp32">32sp</dimen>
+    <dimen name="sp40">40sp</dimen>
+    <dimen name="sp48">48sp</dimen>
+
+
+</resources>
