@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imgLogin"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="@dimen/dp136"
+        android:layout_height="@dimen/dp136"
+        android:layout_marginTop="@dimen/dp24"
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_iniciar"
-        android:textSize="26sp"
+        android:textSize="@dimen/sp24"
         app:layout_constraintTop_toBottomOf="@id/imgLogin"
         android:layout_margin="16dp"
         />
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvInicio"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomUsuario"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_entrar"
         app:layout_constraintTop_toBottomOf="@id/etPw"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         android:onClick="btnEntrar"
         style="@style/HidraButton">
     </com.google.android.material.button.MaterialButton>
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_registro"
         app:layout_constraintTop_toBottomOf="@id/btnEntrar"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         android:onClick="btnRegistro"
         style="@style/HidraButton">
 

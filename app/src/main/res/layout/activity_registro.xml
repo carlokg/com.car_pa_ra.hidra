@@ -10,14 +10,14 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorPrimario"
     >
 
     <ImageView
         android:id="@+id/imgLogin"
-        android:layout_width="106dp"
-        android:layout_height="106dp"
+        android:layout_width="@dimen/dp104"
+        android:layout_height="@dimen/dp104"
         android:layout_marginTop="@dimen/dp24"
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogin"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomUsuario"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw2"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
@@ -113,17 +113,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etDesc"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="@dimen/dp160"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDir"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/TextOutlined"
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="@dimen/dp160"
             android:hint="@string/hint_desc"
             android:gravity="start"
             android:scrollbars="vertical"/>
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_registro"
         app:layout_constraintTop_toBottomOf="@id/etDesc"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp16"
         style="@style/HidraButton"
         android:onClick="btnRegistrar">
 
