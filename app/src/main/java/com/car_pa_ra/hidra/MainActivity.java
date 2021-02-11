@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity
                     //selectedFragment = new AlgorithmFragment();
                     break;
                 case R.id.social:
-                    ///selectedFragment = new CourseFragment();
+                    //selectedFragment = new MapaActivity();
+                    Intent i = new Intent(getApplicationContext(), MapaActivity.class);
+                    startActivity(i);
                     break;
                 case R.id.perfil:
                     //selectedFragment = new ProfileFragment();
