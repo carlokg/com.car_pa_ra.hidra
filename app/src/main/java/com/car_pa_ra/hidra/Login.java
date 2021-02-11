@@ -44,7 +44,6 @@ public class Login extends AppCompatActivity {
 
             if (user != null) {
                 etNomUsuario.getEditText().setText(user.getEmail());
-                btnRegistrarse.setEnabled(false);
             }
         }
 

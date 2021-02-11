@@ -10,11 +10,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements OnControlerFragmentListener{
+
+    FirebaseAuth fba;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+        fba = FirebaseAuth.getInstance();
 
         //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AlgorithmFragment()).commit();
 
@@ -54,9 +60,33 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, selectedFragment)
+                    .addToBackStack(null)
                     .commit();
             return true;
         }
     };
 
+
+    @Override
+    public void selectFrgment(String texto) {
+
+        Fragment selectedFragment = null;
+
+        switch (texto){
+            case "about":
+                selectedFragment = new AboutFragment();
+                break;
+            case "logout":
+                fba.signOut();
+                Intent i = new Intent(this, Login.class);
+                startActivity(i);
+                finish();
+                break;
+        }
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, selectedFragment)
+                .addToBackStack(null)
+                .commit();
+    }
 }

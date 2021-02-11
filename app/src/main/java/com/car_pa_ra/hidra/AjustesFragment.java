@@ -1,7 +1,9 @@
 package com.car_pa_ra.hidra;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,10 +14,13 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-public class AjustesFragment extends Fragment implements View.OnClickListener{
+public class AjustesFragment extends Fragment {
 
+    private OnControlerFragmentListener listener;
     ImageView imgAjustes;
     Button btnAboutus;
+    Button btnlogOut;
+
 
     public AjustesFragment() {
     }
@@ -33,44 +38,51 @@ public class AjustesFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ajustes, container, false);
         imgAjustes = view.findViewById(R.id.imgAjustes);
-        Glide.with(this).load(R.drawable.ic_appbar_config).circleCrop().into(imgAjustes);
+        Glide.with(this).load(R.drawable.ic_appbar_config).into(imgAjustes);
 
         btnAboutus = (Button) view.findViewById(R.id.btnAbout);
-        btnAboutus.setOnClickListener(this);
+        btnlogOut = (Button) view.findViewById(R.id.btnLogout);
+
+        btnAboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String texto = "about";
+
+                listener.selectFrgment(texto);
+            }
+        });
+
+        btnlogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String texto = "logout";
+
+                listener.selectFrgment(texto);
+            }
+        });
 
         return view;
-
 
     }
 
     @Override
-    public void onClick(View v) {
-        //TODO TERMINAR ONCLICK
-       /* Fragment selectedFragment = null;
-        switch (v.getId()) {
-            case R.id.btnAbout:
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
 
-                AboutFragment abf = new AboutFragment();
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, abf)
-                        .commit();
-                //selectedFragment = new AboutFragment();
-
-                break;
-            case R.id.btnHelp:
-                break;
-
-            case R.id.btnLogout:
-                break;
-
-
+        if (context instanceof OnControlerFragmentListener) {
+            listener = (OnControlerFragmentListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
         }
+    }
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_container, selectedFragment)
-                .commit();*/
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        listener = null;
 
     }
+
 }
