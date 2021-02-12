@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimario"
+    android:background="@color/colorFondo"
     tools:context=".Login">
 
     <ImageView
         android:id="@+id/imgLogin"
-        android:layout_width="@dimen/dp136"
-        android:layout_height="@dimen/dp136"
-        android:layout_marginTop="@dimen/dp24"
+        android:layout_width="@dimen/dp96"
+        android:layout_height="@dimen/dp96"
+        android:layout_marginTop="@dimen/dp40"
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,10 @@
         android:text="@string/tv_iniciar"
         android:textSize="@dimen/sp32"
         app:layout_constraintTop_toBottomOf="@id/imgLogin"
-        android:layout_margin="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp104"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:fontFamily="@font/catamaran_extralight"
         android:textColor="@color/colorPrimarioOscuro"
         />
 
@@ -43,6 +46,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_nombre_usuario"
+            android:inputType="textEmailAddress"
+
+            android:fontFamily="@font/catamaran_extralight"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,6 +66,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:fontFamily="@font/catamaran_extralight"
             android:hint="@string/hint_pw"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,20 +77,26 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_entrar"
         app:layout_constraintTop_toBottomOf="@id/etPw"
-        android:layout_margin="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp96"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:fontFamily="@font/catamaran_medium"
         android:onClick="btnEntrar"
         style="@style/HidraButton">
     </com.google.android.material.button.MaterialButton>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegistrarse"
+        style="@style/boton_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_registro"
-        app:layout_constraintTop_toBottomOf="@id/btnEntrar"
         android:layout_margin="@dimen/dp16"
+        android:fontFamily="@font/catamaran_medium"
         android:onClick="btnRegistro"
-        style="@style/HidraButton">
-
-    </com.google.android.material.button.MaterialButton>
+        android:text="@string/btn_registro"
+        android:textColor="@color/colorAcento"
+        app:layout_constraintTop_toBottomOf="@id/btnEntrar"
+        app:strokeColor="@color/colorAcento"
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

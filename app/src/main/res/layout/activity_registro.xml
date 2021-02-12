@@ -11,7 +11,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimario"
+    android:background="@color/colorFondo"
     >
 
     <ImageView
@@ -39,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_nombre_usuario"
+            android:fontFamily="@font/catamaran_extralight"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,7 +57,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_email"/>
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/catamaran_extralight"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +76,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_pw"/>
+            android:hint="@string/hint_pw"
+            android:inputType="textPassword"
+            android:fontFamily="@font/catamaran_extralight"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -90,7 +95,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_pw2"/>
+            android:hint="@string/hint_pw2"
+            android:inputType="textPassword"
+            android:fontFamily="@font/catamaran_extralight"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +115,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_dir"/>
+            android:hint="@string/hint_dir"
+            android:fontFamily="@font/catamaran_extralight"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -126,7 +135,8 @@
             android:layout_height="@dimen/dp160"
             android:hint="@string/hint_desc"
             android:gravity="start"
-            android:scrollbars="vertical"/>
+            android:scrollbars="vertical"
+            android:fontFamily="@font/catamaran_extralight"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -137,9 +147,9 @@
         android:text="@string/btn_registro"
         app:layout_constraintTop_toBottomOf="@id/etDesc"
         android:layout_margin="@dimen/dp16"
-        style="@style/HidraButton"
-        android:onClick="btnRegistrar">
-
+        app:strokeColor="@color/colorAcento"
+        android:textColor="@color/colorAcento"
+        style="@style/boton_reg">
     </com.google.android.material.button.MaterialButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
