@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity
                     break;
             }
 
-            getSupportFragmentManager()
+            /*getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, selectedFragment)
                     .addToBackStack(null)
-                    .commit();
+                    .commit();*/
             return true;
         }
     };

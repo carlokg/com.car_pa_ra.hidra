@@ -5,8 +5,8 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
-import android.widget.Toast;
 
+import com.car_pa_ra.hidra.Utils.CustomMarkerInfo;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,8 +25,6 @@ import androidx.fragment.app.FragmentActivity;
 public class MapaActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    double lng;
-    double lat;
 
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
@@ -45,10 +43,17 @@ public class MapaActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-        mMap.addMarker(new MarkerOptions().position(latLng).title("Provisional"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng)
+                //TO-DO:
+                //Añadir icono
+                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.perfil))
+        );
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        CustomMarkerInfo markerInfoWindowAdapter = new CustomMarkerInfo(getApplicationContext());
+        googleMap.setInfoWindowAdapter(markerInfoWindowAdapter);
+
     }
 
     private void fetchLocation() {
