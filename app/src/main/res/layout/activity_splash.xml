@@ -7,16 +7,15 @@
     android:background="@color/colorPrimarioOscuro"
     tools:context=".Splash">
 
-    <!--
+
     <View
         android:id="@+id/fondo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimarioClaro"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-    -->
+        app:layout_constraintStart_toStartOf="parent"></View>
+
     <ImageView
         android:id="@+id/imgApp"
         android:layout_width="240dp"
