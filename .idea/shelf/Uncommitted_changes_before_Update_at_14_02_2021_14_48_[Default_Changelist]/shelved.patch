@@ -1,0 +1,151 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.car_pa_ra.hidra\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@drawable/ic_icono_app_foreground\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@drawable/ic_icono_app_foreground\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n        <activity android:name=\".Splash\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity android:name=\".Login\" />\r\n        <activity android:name=\".Registro\" />\r\n        <activity android:name=\".MainActivity\"/>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 8ebfdce561d47cc393fa56f8ad39b484e8f95a85)
++++ app/src/main/AndroidManifest.xml	(date 1613297991406)
+@@ -18,6 +18,27 @@
+         <activity android:name=".Login" />
+         <activity android:name=".Registro" />
+         <activity android:name=".MainActivity"/>
++
++        <service
++            android:name=".GIFWallpaperService"
++            android:enabled="true"
++            android:label="GIF Wallpaper"
++            android:permission="android.permission.BIND_WALLPAPER" >
++            <intent-filter>
++                <action android:name="android.service.wallpaper.WallpaperService"/>
++            </intent-filter>
++            <meta-data
++                android:name="android.service.wallpaper"
++                android:resource="@xml/wallpaper" >
++            </meta-data>
++        </service>
++
+     </application>
+ 
++    <uses-feature
++        android:name="android.software.live_wallpaper"
++        android:required="true" >
++    </uses-feature>
++
++
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/java/com/car_pa_ra/hidra/GIFWallpaperService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/car_pa_ra/hidra/GIFWallpaperService.java	(date 1613306357928)
++++ app/src/main/java/com/car_pa_ra/hidra/GIFWallpaperService.java	(date 1613306357928)
+@@ -0,0 +1,89 @@
++package com.car_pa_ra.hidra;
++
++import android.graphics.Canvas;
++import android.graphics.Movie;
++import android.os.Handler;
++import android.service.wallpaper.WallpaperService;
++import android.util.Log;
++import android.view.SurfaceHolder;
++
++import java.io.IOException;
++
++public class GIFWallpaperService extends WallpaperService {
++
++    @Override
++    public WallpaperService.Engine onCreateEngine() {
++        try {
++            Movie movie = Movie.decodeStream(
++                    getResources().getAssets().open("firmamentoed.gif"));
++
++            return new GIFWallpaperEngine(movie);
++        }catch(IOException e){
++            Log.d("GIF", "Could not load asset");
++            return null;
++        }
++    }
++
++
++    private class GIFWallpaperEngine extends WallpaperService.Engine {
++        private final int frameDuration = 20;
++
++        private SurfaceHolder holder;
++        private Movie movie;
++        private boolean visible;
++        private Handler handler;
++
++        public GIFWallpaperEngine(Movie movie) {
++            this.movie = movie;
++            handler = new Handler();
++        }
++
++        @Override
++        public void onCreate(SurfaceHolder surfaceHolder) {
++            super.onCreate(surfaceHolder);
++            this.holder = surfaceHolder;
++        }
++
++
++        private Runnable drawGIF = new Runnable() {
++            public void run() {
++                draw();
++            }
++        };
++
++        private void draw() {
++            if (visible) {
++                Canvas canvas = holder.lockCanvas();
++                canvas.save();
++                // Adjust size and position so that
++                // the image looks good on your screen
++                canvas.scale(3f, 3f);
++                movie.draw(canvas, -100, 0);
++                canvas.restore();
++                holder.unlockCanvasAndPost(canvas);
++                movie.setTime((int) (System.currentTimeMillis() % movie.duration()));
++
++                handler.removeCallbacks(drawGIF);
++                handler.postDelayed(drawGIF, frameDuration);
++            }
++        }
++
++        @Override
++        public void onVisibilityChanged(boolean visible) {
++            this.visible = visible;
++            if (visible) {
++                handler.post(drawGIF);
++            } else {
++                handler.removeCallbacks(drawGIF);
++            }
++        }
++
++        @Override
++        public void onDestroy() {
++            super.onDestroy();
++            handler.removeCallbacks(drawGIF);
++        }
++    }
++
++
++}
+Index: app/src/main/res/xml/wallpaper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/xml/wallpaper.xml	(date 1613297767209)
++++ app/src/main/res/xml/wallpaper.xml	(date 1613297767209)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<wallpaper
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:label="GIF Wallpaper"
++    android:thumbnail="@drawable/ic_icon">
++</wallpaper>
+\ No newline at end of file
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_28__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_28__Default_Changelist_.xml

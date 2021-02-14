@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/explora"
+        android:title="@string/explora"
+        android:icon="@drawable/ic_appbar_explora"/>
+    <item
+        android:id="@+id/social"
+        android:title="@string/social"
+        android:icon="@drawable/ic_appbar_social"/>
+    <item
+        android:id="@+id/perfil"
+        android:title="@string/perfil"
+        android:icon="@drawable/ic_appbar_perfil"/>
+    <item
+        android:id="@+id/ayuda"
+        android:title="@string/ayuda"
+        android:icon="@drawable/ic_appbar_ayuda"/>
+    <item
+        android:id="@+id/config"
+        android:title="@string/ajustes"
+        android:icon="@drawable/ic_appbar_config"/>
+
+</menu>

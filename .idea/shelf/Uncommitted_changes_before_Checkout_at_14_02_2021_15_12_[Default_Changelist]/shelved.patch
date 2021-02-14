@@ -1,0 +1,27 @@
+Index: app/src/main/res/values/preloaded_fonts.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <array name=\"preloaded_fonts\" translatable=\"false\">\r\n        <item>@font/bubbler_one</item>\r\n        <item>@font/catamaran</item>\r\n        <item>@font/catamaran_black</item>\r\n        <item>@font/catamaran_extralight</item>\r\n        <item>@font/catamaran_light</item>\r\n        <item>@font/catamaran_medium</item>\r\n        <item>@font/cinzel_bold</item>\r\n    </array>\r\n</resources>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/preloaded_fonts.xml	(revision f8239adbcc313b2aa7d0c3ad8a3e2974ccd3665d)
++++ app/src/main/res/values/preloaded_fonts.xml	(date 1613311884975)
+@@ -1,7 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <array name="preloaded_fonts" translatable="false">
+-        <item>@font/bubbler_one</item>
+         <item>@font/catamaran</item>
+         <item>@font/catamaran_black</item>
+         <item>@font/catamaran_extralight</item>
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_17_49__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_17_49__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_05_02_2021_9_45__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Update_at_05_02_2021_9_45__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_00__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_00__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_32__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_32__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_32__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_32__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_24__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_24__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_33__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_05_02_2021_19_33__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_13__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_13__Default_Changelist_.xml
