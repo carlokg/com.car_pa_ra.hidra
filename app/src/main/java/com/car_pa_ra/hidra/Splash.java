@@ -30,8 +30,6 @@ public class Splash extends AppCompatActivity {
         AnimationDrawable progressAnimation = (AnimationDrawable) fondo.getBackground();
         progressAnimation.start();
 
-        Animation elegance = AnimationUtils.loadAnimation(this, R.anim.fadeln);
-        imgApp.startAnimation(elegance);
         openApp(true);
     }
 
