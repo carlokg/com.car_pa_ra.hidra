@@ -1,0 +1,178 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nbuildscript {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n    dependencies {\r\n        classpath \"com.android.tools.build:gradle:4.0.1\"\r\n\r\n        // NOTE: Do not place your application dependencies here; they belong\r\n        // in the individual module build.gradle files\r\n    }\r\n}\r\n\r\nallprojects {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 2a568f2b37f923213ed0e38e49f851343b7d9862)
++++ build.gradle	(date 1612720141932)
+@@ -5,7 +5,8 @@
+         jcenter()
+     }
+     dependencies {
+-        classpath "com.android.tools.build:gradle:4.0.1"
++        classpath 'com.android.tools.build:gradle:4.1.2'
++        classpath 'com.google.gms:google-services:4.3.5'
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\r\n\r\nandroid {\r\n    compileSdkVersion 30\r\n    buildToolsVersion \"30.0.2\"\r\n\r\n    defaultConfig {\r\n        applicationId \"com.car_pa_ra.hidra\"\r\n        minSdkVersion 16\r\n        targetSdkVersion 30\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\r\n    implementation 'androidx.appcompat:appcompat:1.2.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'\r\n    implementation 'com.google.android.material:material:1.2.1'\r\n    implementation 'com.github.bumptech.glide:glide:4.9.0'\r\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'\r\n    testImplementation 'junit:junit:4.12'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 2a568f2b37f923213ed0e38e49f851343b7d9862)
++++ app/build.gradle	(date 1612720213527)
+@@ -1,4 +1,5 @@
+ apply plugin: 'com.android.application'
++apply plugin: 'com.google.gms.google-services'
+ 
+ android {
+     compileSdkVersion 30
+@@ -28,6 +29,8 @@
+     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+     implementation 'com.google.android.material:material:1.2.1'
+     implementation 'com.github.bumptech.glide:glide:4.9.0'
++    implementation platform('com.google.firebase:firebase-bom:26.4.0')
++    implementation 'com.google.firebase:firebase-auth:20.0.2'
+     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+Index: app/src/main/java/com/car_pa_ra/hidra/Login.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.car_pa_ra.hidra;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.ImageView;\r\n\r\nimport com.bumptech.glide.Glide;\r\n\r\npublic class Login extends AppCompatActivity {\r\n\r\n        ImageView imgLogin;\r\n        @Override\r\n        protected void onCreate(Bundle savedInstanceState) {\r\n            super.onCreate(savedInstanceState);\r\n            setContentView(R.layout.activity_login);\r\n            imgLogin = findViewById(R.id.imgLogin);\r\n\r\n            Glide.with(this).load(R.drawable.ic_icon).circleCrop().into(imgLogin);\r\n        }\r\n\r\n\r\n    public void btnEntrar(View view) {\r\n            Intent iExplora = new Intent(this, MainActivity.class);\r\n            startActivity(iExplora);\r\n    }\r\n\r\n    public void btnRegistro(View view) {\r\n            Intent iRegis = new Intent(this, Registro.class);\r\n            startActivity(iRegis);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/car_pa_ra/hidra/Login.java	(revision 2a568f2b37f923213ed0e38e49f851343b7d9862)
++++ app/src/main/java/com/car_pa_ra/hidra/Login.java	(date 1612720686295)
+@@ -1,30 +1,86 @@
+ package com.car_pa_ra.hidra;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+ import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
+ import android.widget.ImageView;
++import android.widget.Toast;
+ 
+ import com.bumptech.glide.Glide;
++import com.google.android.gms.tasks.OnCompleteListener;
++import com.google.android.gms.tasks.Task;
++import com.google.firebase.auth.AuthResult;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.auth.FirebaseUser;
+ 
+ public class Login extends AppCompatActivity {
+ 
++
+         ImageView imgLogin;
++        EditText etNomUsuario;
++        EditText etPw;
++
++        private FirebaseAuth fba;
++        private FirebaseUser user;
++        Button btnRegistrarse;
++
+         @Override
+         protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+             setContentView(R.layout.activity_login);
+             imgLogin = findViewById(R.id.imgLogin);
+ 
++            etNomUsuario = findViewById(R.id.etNomUsuario);
++            etPw = findViewById(R.id.etPw);
++            btnRegistrarse = findViewById(R.id.btnRegistrarse);
++
++            fba = FirebaseAuth.getInstance();
++            user = fba.getCurrentUser();
++
++            if (user != null) {
++                etNomUsuario.setText(user.getEmail());
++                btnRegistrarse.setEnabled(false);
++            }
++
+             Glide.with(this).load(R.drawable.ic_icon).circleCrop().into(imgLogin);
+         }
+ 
+ 
+     public void btnEntrar(View view) {
+-            Intent iExplora = new Intent(this, MainActivity.class);
+-            startActivity(iExplora);
++        String email = etNomUsuario.getText().toString().trim();
++        String password = etPw.getText().toString().trim();
++        if (email.isEmpty() || password.isEmpty()) {
++            Toast.makeText(this, getString(R.string.no_data),
++                    Toast.LENGTH_LONG).show();
++        } else {
++            fba.signInWithEmailAndPassword(email, password)
++                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
++                        @Override
++                        public void onComplete(@NonNull Task<AuthResult> task) {
++                            if (task.isSuccessful()) {
++                                user = fba.getCurrentUser();
++                                accederApp();
++                                finish();
++                            } else {
++                                Toast.makeText(Login.this,
++                                        getString(R.string.msj_no_accede)
++                                                + "\n" + task.getException().getMessage(),
++                                        Toast.LENGTH_SHORT).show();
++                            }
++                        }
++                    });
++        }
++    }
++
++    private void accederApp() {
++        Intent i = new Intent(this, MainActivity.class);
++        startActivity(i);
++        finish();
+     }
+ 
+     public void btnRegistro(View view) {
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Hidra</string>\r\n    <string name=\"foto_login\">Foto login</string>\r\n    <string name=\"hint_nombre_usuario\">Nombre de usuario</string>\r\n    <string name=\"hint_email\">Correo electrónico</string>\r\n    <string name=\"hint_pw\">Contraseña</string>\r\n    <string name=\"hint_pw2\">Repetir contraseña</string>\r\n    <string name=\"hint_dir\">Dirección</string>\r\n    <string name=\"hint_desc\">Cuéntanos un poco sobre tí</string>\r\n    <string name=\"btn_registro\">Regístrate</string>\r\n    <string name=\"tv_iniciar\">Iniciar Sesión</string>\r\n    <string name=\"btn_entrar\">Entrar</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 2a568f2b37f923213ed0e38e49f851343b7d9862)
++++ app/src/main/res/values/strings.xml	(date 1612720686289)
+@@ -10,4 +10,6 @@
+     <string name="btn_registro">Regístrate</string>
+     <string name="tv_iniciar">Iniciar Sesión</string>
+     <string name="btn_entrar">Entrar</string>
++    <string name="no_data">Debe introducir el email y la contraseña</string>
++    <string name="msj_no_accede">No se ha podido acceder</string>
+ </resources>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Fri Jan 22 11:52:48 CET 2021\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-6.1.1-all.zip\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision 2a568f2b37f923213ed0e38e49f851343b7d9862)
++++ gradle/wrapper/gradle-wrapper.properties	(date 1612720145001)
+@@ -1,6 +1,6 @@
+-#Fri Jan 22 11:52:48 CET 2021
++#Sun Feb 07 18:49:05 CET 2021
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-6.1.1-all.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-6.5-all.zip
+diff --git app/google-services.json app/google-services.json
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_28__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2021_18_28__Default_Changelist_.xml
