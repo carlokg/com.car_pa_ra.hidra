@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondo"
+    android:background="@color/white"
     tools:context=".Login">
 
     <ImageView
         android:id="@+id/imgLogin"
         android:layout_width="@dimen/dp96"
         android:layout_height="@dimen/dp96"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp48"
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:text="@string/tv_iniciar"
         android:textSize="@dimen/sp32"
         app:layout_constraintTop_toBottomOf="@id/imgLogin"
-        android:layout_marginTop="@dimen/dp104"
+        android:layout_marginTop="@dimen/dp80"
         android:layout_marginLeft="@dimen/dp16"
         android:layout_marginRight="@dimen/dp16"
         android:fontFamily="@font/catamaran_extralight"
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvInicio"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -47,7 +47,6 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_nombre_usuario"
             android:inputType="textEmailAddress"
-
             android:fontFamily="@font/catamaran_extralight"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomUsuario"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -91,12 +90,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp16"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/catamaran_medium"
         android:onClick="btnRegistro"
         android:text="@string/btn_registro"
         android:textColor="@color/colorAcento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnEntrar"
-        app:strokeColor="@color/colorAcento"
-        tools:layout_editor_absoluteX="16dp" />
+        app:strokeColor="@color/colorAcento" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

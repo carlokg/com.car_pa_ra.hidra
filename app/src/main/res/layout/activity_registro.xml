@@ -32,7 +32,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogin"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -51,7 +52,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomUsuario"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -70,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -89,7 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -109,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPw2"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -127,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDir"
         android:layout_margin="@dimen/dp16"
-        style="@style/TextOutlined"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText

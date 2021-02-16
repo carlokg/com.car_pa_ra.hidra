@@ -10,7 +10,7 @@
     <style name="splashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimario</item>
-        <item name="colorPrimaryDark">@color/colorPrimarioOscuro</item>
+        <item name="colorPrimaryDark">@color/colorBarraSplash</item>
         <item name="colorAccent">@color/colorAcento</item>
     </style>
 
@@ -41,5 +41,6 @@
         <item name="cornerSize">3dp</item>
 
     </style>
+
 
 </resources>
