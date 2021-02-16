@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case R.id.social:
                     //selectedFragment = new MapaActivity();
-                    Intent i = new Intent(getApplicationContext(), MapaActivity.class);
-                    startActivity(i);
                     break;
                 case R.id.perfil:
                     //selectedFragment = new ProfileFragment();
@@ -59,11 +57,11 @@ public class MainActivity extends AppCompatActivity
                     break;
             }
 
-            /*getSupportFragmentManager()
+            getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, selectedFragment)
                     .addToBackStack(null)
-                    .commit();*/
+                    .commit();
             return true;
         }
     };
