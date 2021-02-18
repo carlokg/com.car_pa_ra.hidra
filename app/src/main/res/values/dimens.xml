@@ -18,6 +18,7 @@
     <dimen name="dp80">80dp</dimen>
     <dimen name="dp96">96dp</dimen>
     <dimen name="dp88">88dp</dimen>
+    <dimen name="dp4">4dp</dimen>
 
 
 </resources>

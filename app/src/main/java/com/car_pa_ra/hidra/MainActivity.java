@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         fba = FirebaseAuth.getInstance();
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AlgorithmFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploraFragment()).commit();
 
     }
 
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.explora:
-                    //selectedFragment = new AlgorithmFragment();
+
+                    selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
                     ///selectedFragment = new CourseFragment();
@@ -57,11 +58,15 @@ public class MainActivity extends AppCompatActivity
                     break;
             }
 
+
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, selectedFragment)
                     .addToBackStack(null)
                     .commit();
+
+
+
             return true;
         }
     };
