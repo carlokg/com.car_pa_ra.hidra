@@ -6,20 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ExploraFragment">
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExplora"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:background="@color/white"
-        android:paddingStart="@dimen/dp16"
-        android:paddingEnd="@dimen/dp16"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:scrollbars="vertical"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
