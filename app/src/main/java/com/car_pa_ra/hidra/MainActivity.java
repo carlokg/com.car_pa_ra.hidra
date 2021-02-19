@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
-                    ///selectedFragment = new CourseFragment();
+                    selectedFragment = new AyudaFragment();
                     break;
                 case R.id.perfil:
                     //selectedFragment = new ProfileFragment();
                     break;
                 case R.id.ayuda:
-                    //selectedFragment = new ProfileFragment();
+                    selectedFragment = new AyudaFragment();
                     break;
                 case R.id.config:
                     selectedFragment = new AjustesFragment();
