@@ -23,10 +23,6 @@
     <dimen name="dp208">208dp</dimen>
     <dimen name="dp8">8dp</dimen>
     <dimen name="dp56">56dp</dimen>
-    <dimen name="dp4">4dp</dimen>
-    <dimen name="dp200">200dp</dimen>
-    <dimen name="dp208">208dp</dimen>
-    <dimen name="dp8">8dp</dimen>
 
 
 </resources>

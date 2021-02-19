@@ -31,14 +31,14 @@
         android:id="@+id/tvApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imgApp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/lexend_mega_regular"
+        android:gravity="center"
         android:text="HIDRA"
         android:textColor="@color/colorPrimario"
-        android:gravity="center"
         android:textSize="34dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgApp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
