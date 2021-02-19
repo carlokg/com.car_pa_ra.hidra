@@ -27,6 +27,12 @@
         <item name="cornerRadius">3dp</item>
     </style>
 
+    <style name="HidraButtonAjustes"
+        parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/statelist_btn_ajustes</item>
+        <item name="cornerRadius">3dp</item>
+    </style>
+
 
     <style name="boton_reg" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
