@@ -20,10 +20,13 @@
     <string name="msj_registrado">Usuario registrado</string>
     <string name="msj_no_registrado">No se ha podido registrar el usuario</string>
     <string name="msj_pw_iguales">Las contraseñas introducidas no coinciden</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_about">About Us</string>
     <string name="btn_logout">Log out</string>
     <string name="btn_help">Ayuda</string>
     <string name="content_about_us">La idea es poner en contacto a gente utilizando principalmente la ubicación y la cercanía entre los usuarios. Se podrá establecer un radio máximo para ver los anuncios empleando un filtro. Se podrán crear tres tipos de grupos con enfoques diferentes: Ayudante (prestará servicio de ayuda a otro usuario), Solicitante de ayuda (Solicitará ayuda a cualquier usuario de la aplicación que se preste a ello), Grupo social (Para compartir aficiones comunes como actividades deportivas, culturales, o cualquier tipo de afición)</string>
+    <string name="img_tarjeta">imagen tarjeta</string>
+    <string name="title">Titulo</string>
+    <string name="secondary_text">Descripcion</string>
+    <string name="deporte">Deporte</string>
 </resources>
