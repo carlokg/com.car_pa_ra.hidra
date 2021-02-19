@@ -1,6 +1,7 @@
 package com.car_pa_ra.hidra;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -55,9 +56,8 @@ public class AjustesFragment extends Fragment {
         btnlogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String texto = "logout";
-
-                listener.selectFrgment(texto);
+                Intent i = new Intent(getContext(), Login.class);
+                startActivity(i);
             }
         });
 
