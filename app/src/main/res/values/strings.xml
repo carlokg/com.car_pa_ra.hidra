@@ -29,5 +29,7 @@
     <string name="title">Titulo</string>
     <string name="secondary_text">Descripcion</string>
     <string name="deporte">Deporte</string>
+    <string name="txt_notificaciones">Notificaciones</string>
+    <string name="cerrar_dialogo">Cerrar ajustes</string>
     <string name="descripcion">Descripción</string>
 </resources>
