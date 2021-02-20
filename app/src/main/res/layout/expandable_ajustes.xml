@@ -2,20 +2,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorExpandibleAjustes">
 
     <LinearLayout
-        android:layout_width="@dimen/dp240"
-        android:layout_height="@dimen/dp200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:layout_marginTop="@dimen/dp16"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp40"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="aboutUs">
 
 
                 <ImageView
@@ -43,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp40"
             android:orientation="horizontal"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="@dimen/dp16">
 
 
             <ImageView
@@ -70,7 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp40"
             android:orientation="horizontal"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="@dimen/dp16"
+            android:onClick="logOut">
 
 
             <ImageView
@@ -96,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp40"
             android:orientation="horizontal"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="@dimen/dp16">
 
 
             <ImageView
