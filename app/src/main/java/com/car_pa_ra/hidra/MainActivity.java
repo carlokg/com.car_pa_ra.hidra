@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
  * @see MainActivity
  * @see AboutFragment
  *
+
  */
 public class MainActivity extends AppCompatActivity
         implements OnControlerFragmentListener{
@@ -59,7 +60,9 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
-                    selectedFragment = new AyudaFragment();
+                    Intent i = new Intent(getApplicationContext(), CrearGrupo.class);
+                    startActivity(i);
+                    //selectedFragment = new AyudaFragment();
                     break;
                 case R.id.perfil:
                     selectedFragment = new PerfilFragment();
