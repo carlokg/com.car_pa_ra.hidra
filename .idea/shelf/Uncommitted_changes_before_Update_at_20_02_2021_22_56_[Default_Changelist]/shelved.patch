@@ -1,0 +1,44 @@
+Index: app/src/main/java/com/car_pa_ra/hidra/Splash.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.car_pa_ra.hidra;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.graphics.drawable.AnimationDrawable;\r\nimport android.os.Bundle;\r\nimport android.os.Handler;\r\nimport android.view.View;\r\nimport android.view.animation.Animation;\r\nimport android.view.animation.AnimationUtils;\r\nimport android.widget.ImageView;\r\n\r\nimport com.bumptech.glide.Glide;\r\n\r\npublic class Splash extends AppCompatActivity {\r\n\r\n    ImageView imgApp;\r\n    View fondo;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_splash);\r\n\r\n        imgApp = findViewById(R.id.imgApp);\r\n        fondo = findViewById(R.id.fondo);\r\n        Glide.with(this).load(R.drawable.ic_icon_claro).into(imgApp);\r\n        fondo.setBackgroundResource(R.drawable.splash_anim);\r\n\r\n        AnimationDrawable progressAnimation = (AnimationDrawable) fondo.getBackground();\r\n        progressAnimation.start();\r\n\r\n        openApp(true);\r\n    }\r\n\r\n    private void openApp(boolean locationPermission) {\r\n        Handler handler = new Handler();\r\n        handler.postDelayed(new Runnable() {\r\n            @Override\r\n            public void run() {\r\n                Intent intent = new Intent(Splash\r\n                        .this, Login.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        }, 5000);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/car_pa_ra/hidra/Splash.java	(revision 99261b38c53cab4c2218f04d4fa5119b02e99460)
++++ app/src/main/java/com/car_pa_ra/hidra/Splash.java	(date 1613858176683)
+@@ -23,7 +23,6 @@
+         setContentView(R.layout.activity_splash);
+ 
+         imgApp = findViewById(R.id.imgApp);
+-        fondo = findViewById(R.id.fondo);
+         Glide.with(this).load(R.drawable.ic_icon_claro).into(imgApp);
+         fondo.setBackgroundResource(R.drawable.splash_anim);
+ 
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_14_55__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_14_55__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Merge_at_11_02_2021_18_43__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Merge_at_11_02_2021_18_43__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_12_02_2021_12_29__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_12_02_2021_12_29__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_00__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_00__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_36__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_36__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_02__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_02__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_13__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_13__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_11_12__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_11_12__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_19__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_19__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_12__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_12__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_04__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_04__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_14_02_2021_14_48__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Update_at_14_02_2021_14_48__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_11_13__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_11_13__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_06__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_06__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_00__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_00__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_10__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_10__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Merge_at_07_02_2021_18_25__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Merge_at_07_02_2021_18_25__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_14_59__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_14_59__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_15__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2021_15_15__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_18_06__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_17_26__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_17_26__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_17_11__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Update_at_11_02_2021_17_11__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_12_02_2021_12_30__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_12_02_2021_12_30__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_07__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_07_02_2021_19_07__Default_Changelist_.xml
