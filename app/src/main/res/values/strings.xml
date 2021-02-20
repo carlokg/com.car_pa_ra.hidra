@@ -29,4 +29,5 @@
     <string name="title">Titulo</string>
     <string name="secondary_text">Descripcion</string>
     <string name="deporte">Deporte</string>
+    <string name="descripcion">Descripción</string>
 </resources>

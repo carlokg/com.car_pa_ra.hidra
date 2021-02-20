@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new AyudaFragment();
                     break;
                 case R.id.perfil:
-                    //selectedFragment = new ProfileFragment();
+                    selectedFragment = new PerfilFragment();
                     break;
                 case R.id.ayuda:
                     selectedFragment = new AyudaFragment();
