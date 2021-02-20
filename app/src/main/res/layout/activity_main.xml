@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         app:menu="@menu/navbar"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="280dp"
         app:itemIconTint="@color/colorPrimarioOscuro"
         app:itemTextColor="@color/colorPrimarioOscuro"/>
 
@@ -33,10 +34,10 @@
         android:background="@color/colorAccent"
         app:animationDuration="300"
         app:expandOnClick="true"
-        app:inner_view="@layout/expandable_view"
+        app:inner_view="@layout/expandable_ajustes"
         app:startExpanded="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:title="Passengers" />
+        app:title="@string/ajustes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
