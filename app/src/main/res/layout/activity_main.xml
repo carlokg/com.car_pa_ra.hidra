@@ -25,4 +25,18 @@
         android:layout_marginBottom="@dimen/dp56"
         />
 
+    <com.alespero.expandablecardview.ExpandableCardView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        app:animationDuration="300"
+        app:expandOnClick="true"
+        app:inner_view="@layout/expandable_view"
+        app:startExpanded="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:title="Passengers" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
