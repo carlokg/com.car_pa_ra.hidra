@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
  * @author Pablo
  * @author Carlos
  *
- * Clase MainActiviti contendrá la barra de navegación y sobre este activity se cargarán
+ * Clase MainActivity contendrá la barra de navegación y sobre este activity se cargarán
  * Todos los fragmentos de la aplicación, de tal forma que la barra estará presente en
  * todos los Fragmentos.
  * @see MainActivity
