@@ -27,7 +27,6 @@ import com.google.firebase.auth.FirebaseAuth;
  * todos los Fragmentos.
  * @see MainActivity
  * @see AboutFragment
- * @see AjustesFragment
  *
  */
 public class MainActivity extends AppCompatActivity
