@@ -17,6 +17,7 @@ public class PerfilFragment  extends Fragment {
 
     private OnControlerFragmentListener listener;
 
+    
     ImageView imgUsuario;
     TextView tvUsername;
     TextView tvNsocial;
