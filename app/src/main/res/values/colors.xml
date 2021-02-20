@@ -13,5 +13,6 @@
 <color name="colorTrans">#00D8F0FA</color>
 <color name="colorTrans2">#46D8F0FA</color>
 <color name="white">#FFFFFF</color>
-    <color name="colorBarraSplash">#041633</color>
+<color name="colorBarraSplash">#041633</color>
+<color name="colorTrans3">#2FE6E6E6</color>
 </resources>

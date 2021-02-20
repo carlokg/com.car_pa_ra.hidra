@@ -23,9 +23,7 @@ public class PerfilFragment  extends Fragment {
     TextView tvNayuda;
     TextView tvNvaloracion;
     TextView tvDescripcion;
-    ImageView imgArroba;
     TextView tvCorreoUsuario;
-    ImageView imgLocation;
     TextView tvLocalizacion;
 
     public PerfilFragment(){
@@ -44,10 +42,6 @@ public class PerfilFragment  extends Fragment {
 
         imgUsuario = view.findViewById(R.id.imgUsuario);
         Glide.with(this).load(R.drawable.perfil).into(imgUsuario);
-        imgArroba = view.findViewById(R.id.imgArroba);
-        Glide.with(this).load(R.drawable.arroba).into(imgArroba);
-        imgLocation = view.findViewById(R.id.imgLocation);
-        Glide.with(this).load(R.drawable.arroba).into(imgLocation);
 
         tvUsername = view.findViewById(R.id.tvUsername);
         tvNsocial = view.findViewById(R.id.tvNsocial);

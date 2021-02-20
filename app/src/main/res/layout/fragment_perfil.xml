@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -51,6 +52,8 @@
         android:background="@drawable/layout_bg"
         android:layout_marginStart="@dimen/dp32"
         android:layout_marginEnd="@dimen/dp32"
+        android:elevation="@dimen/dp8"
+        android:clipToPadding="false"
         >
 
         <LinearLayout
@@ -189,13 +192,14 @@
 
         <ImageView
             android:id="@+id/imgArroba"
-            android:layout_width="@dimen/dp32"
-            android:layout_height="@dimen/dp32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/foto_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            app:srcCompat="@drawable/arroba"
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/tvCorreoUsuario"
@@ -203,7 +207,9 @@
             android:layout_height="wrap_content"
             android:text="usuario1@gmail.com"
             android:textSize="@dimen/sp16"
-            android:textColor="@color/colorPrimarioOscuro"/>
+            android:textColor="@color/colorPrimarioOscuro"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"/>
 
     </LinearLayout>
 
@@ -230,12 +236,14 @@
 
         <ImageView
             android:id="@+id/imgLocation"
-            android:layout_width="@dimen/dp32"
-            android:layout_height="@dimen/dp32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/foto_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/location"
+            tools:ignore="VectorDrawableCompat"
             />
 
          <TextView
@@ -244,7 +252,9 @@
              android:layout_height="wrap_content"
              android:text="Ubicación del usuario"
              android:textSize="@dimen/sp16"
-             android:textColor="@color/colorPrimarioOscuro"/>
+             android:textColor="@color/colorPrimarioOscuro"
+             android:layout_marginStart="@dimen/dp8"
+             android:layout_marginEnd="@dimen/dp8"/>
 
     </LinearLayout>
 
