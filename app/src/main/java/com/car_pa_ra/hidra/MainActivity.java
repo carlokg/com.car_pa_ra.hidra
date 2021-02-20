@@ -29,7 +29,6 @@ import com.google.firebase.auth.FirebaseAuth;
  * @see AboutFragment
  * @see AjustesFragment
  *
-
  */
 public class MainActivity extends AppCompatActivity
         implements OnControlerFragmentListener{

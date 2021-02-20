@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hidra</string>
+    <string name="app_name">HIDRA</string>
     <string name="foto_login">Foto login</string>
     <string name="hint_nombre_usuario">Nombre de usuario</string>
     <string name="hint_email">Correo electrónico</string>
