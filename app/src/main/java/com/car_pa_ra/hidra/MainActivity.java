@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
-                    selectedFragment = new AyudaFragment();
+                    Intent i = new Intent(getApplicationContext(), CrearGrupo.class);
+                    startActivity(i);
+                    //selectedFragment = new AyudaFragment();
                     break;
                 case R.id.perfil:
                     //selectedFragment = new ProfileFragment();
@@ -72,11 +74,11 @@ public class MainActivity extends AppCompatActivity
             }
 
 
-            getSupportFragmentManager()
+            /*getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, selectedFragment)
                     .addToBackStack(null)
-                    .commit();
+                    .commit();*/
 
 
 
