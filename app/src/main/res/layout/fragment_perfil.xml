@@ -45,16 +45,15 @@
         android:id="@+id/llPerfil2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/layout_bg"
         android:clipToPadding="false"
         android:elevation="@dimen/dp8"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="@dimen/dp16"
-        android:layout_marginStart="@dimen/dp32"
-        android:layout_marginEnd="@dimen/dp32"
-        >
+        app:layout_constraintTop_toBottomOf="@id/llPerfil1"
+        tools:layout_editor_absoluteX="196dp">
 
         <LinearLayout
             android:layout_width="match_parent"
