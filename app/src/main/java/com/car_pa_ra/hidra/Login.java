@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,6 +69,7 @@ public class Login extends AppCompatActivity {
                                         getString(R.string.msj_no_accede)
                                                 + "\n" + task.getException().getMessage(),
                                         Toast.LENGTH_SHORT).show();
+                                Log.i("Sing in", "error: "+ task.getException().getMessage());
                             }
                         }
                     });

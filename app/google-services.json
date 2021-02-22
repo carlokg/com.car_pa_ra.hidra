@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "629140693202",
+    "project_id": "hidrapi-8e425",
+    "storage_bucket": "hidrapi-8e425.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629140693202:android:de98c4bdb36120921ecd0b",
+        "android_client_info": {
+          "package_name": "com.car_pa_ra.hidra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629140693202-77dhhubbf5konomd8ib7n3dh6cr1ujuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSQSo7JUP5C36oGgfWH3vUZJcBNQys3QA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629140693202-77dhhubbf5konomd8ib7n3dh6cr1ujuf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
