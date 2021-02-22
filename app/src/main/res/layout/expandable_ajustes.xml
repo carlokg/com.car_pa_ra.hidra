@@ -17,26 +17,26 @@
         <LinearLayout
             android:layout_marginTop="@dimen/dp16"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp40"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:onClick="aboutUs">
 
 
                 <ImageView
-                    android:layout_width="@dimen/dp40"
-                    android:layout_height="@dimen/dp40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/sp16"
                     app:srcCompat="@drawable/ic_about_us"
-                    android:layout_marginStart="@dimen/sp8"
-                    android:scaleType="centerCrop"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/btn_about"
                     android:textSize="@dimen/sp24"
                     android:fontFamily="@font/catamaran_medium"
-                    android:layout_marginStart="@dimen/dp40"
+                    android:layout_marginStart="@dimen/dp24"
                     android:textColor="@color/colorPrimarioOscuro"
                     />
 
@@ -51,11 +51,11 @@
 
 
             <ImageView
-                android:layout_width="@dimen/dp40"
-                android:layout_height="@dimen/dp40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/sp16"
                 app:srcCompat="@drawable/ic_help"
-                android:layout_marginStart="@dimen/sp8"
-                android:scaleType="centerCrop"
                 />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:text="@string/btn_help"
                 android:textSize="@dimen/sp24"
                 android:fontFamily="@font/catamaran_medium"
-                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginStart="@dimen/dp24"
                 android:textColor="@color/colorPrimarioOscuro"
                 />
 
@@ -79,11 +79,11 @@
 
 
             <ImageView
-                android:layout_width="@dimen/dp40"
-                android:layout_height="@dimen/dp40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/sp16"
                 app:srcCompat="@drawable/ic_log_out"
-                android:layout_marginStart="@dimen/sp8"
-                android:scaleType="centerCrop"
                 />
 
             <TextView
@@ -92,7 +92,7 @@
                 android:text="@string/btn_logout"
                 android:textSize="@dimen/sp24"
                 android:fontFamily="@font/catamaran_medium"
-                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginStart="@dimen/dp24"
                 android:textColor="@color/colorPrimarioOscuro"
                 />
 
@@ -105,11 +105,11 @@
 
 
             <ImageView
-                android:layout_width="@dimen/dp40"
-                android:layout_height="@dimen/dp40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/sp16"
                 app:srcCompat="@drawable/ic_notific"
-                android:layout_marginStart="@dimen/sp8"
-                android:scaleType="centerCrop"
                 />
 
             <TextView
@@ -118,7 +118,7 @@
                 android:text="@string/txt_notificaciones"
                 android:textSize="@dimen/sp24"
                 android:fontFamily="@font/catamaran_medium"
-                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginStart="@dimen/dp24"
                 android:textColor="@color/colorPrimarioOscuro"
                 />
 

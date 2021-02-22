@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp208"
     android:layout_marginTop="@dimen/dp8"
-    android:layout_marginHorizontal="@dimen/dp4"
+    android:layout_marginHorizontal="@dimen/dp8"
     android:clickable="true"
     android:focusable="true"
     app:cardElevation="@dimen/dp40"
