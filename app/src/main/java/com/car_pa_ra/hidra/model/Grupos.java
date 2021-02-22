@@ -3,7 +3,7 @@ package com.car_pa_ra.hidra.model;
 public class Grupos {
 
     private String ayuSoc;
-    private int imagen;
+    private String imagen;
     private String titulo;
     private String descripcion;
     private String tipo;
@@ -11,7 +11,7 @@ public class Grupos {
     public Grupos() {
     }
 
-    public Grupos(String ayuSoc, int imagen, String titulo, String descripcion, String tipo) {
+    public Grupos(String ayuSoc, String imagen, String titulo, String descripcion, String tipo) {
         this.ayuSoc = ayuSoc;
         this.imagen = imagen;
         this.titulo = titulo;
@@ -23,7 +23,7 @@ public class Grupos {
         return ayuSoc;
     }
 
-    public int getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
