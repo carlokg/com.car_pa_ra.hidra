@@ -8,10 +8,12 @@
 <color name="colorAcento2">#571D27</color>
 <color name="colorAcentoClaro">#D7CCD9</color>
 <color name="colorPrimarioOscuro">#4D5373</color>
+<color name="colorExpandibleAjustes">#80FFFFFF</color>
 <color name="colorPrimarioClaro">#B3E0F2</color>
 <color name="colorFondo">#FFFFFF</color>
 <color name="colorTrans">#00D8F0FA</color>
 <color name="colorTrans2">#46D8F0FA</color>
 <color name="white">#FFFFFF</color>
-    <color name="colorBarraSplash">#041633</color>
+<color name="colorBarraSplash">#041633</color>
+<color name="colorTrans3">#2FE6E6E6</color>
 </resources>
