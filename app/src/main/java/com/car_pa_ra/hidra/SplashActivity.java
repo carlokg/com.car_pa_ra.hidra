@@ -7,13 +7,9 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-
-public class Splash extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     ImageView imgApp;
     View fondo;
@@ -36,8 +32,8 @@ public class Splash extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash
-                        .this, Login.class);
+                Intent intent = new Intent(SplashActivity
+                        .this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

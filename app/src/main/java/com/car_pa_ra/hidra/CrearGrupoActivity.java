@@ -25,7 +25,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 
-public class CrearGrupo extends AppCompatActivity {
+public class CrearGrupoActivity extends AppCompatActivity {
 
     public static final int RC_PHOTO_ADJ = 100;
 
@@ -53,7 +53,7 @@ public class CrearGrupo extends AppCompatActivity {
 
          myRef = FirebaseDatabase.getInstance().getReference("datos").child("grupo");
          mFotoStorageRef = FirebaseStorage.getInstance().getReference()
-                .child("Fotos");
+                .child("FotosGrupos");
     }
 
 
@@ -69,7 +69,7 @@ public class CrearGrupo extends AppCompatActivity {
 
 
         if(etNomG.getEditText().getText().toString().isEmpty()){
-            Toast.makeText(this, "Debe de introducir un nombre, una descripcion y un tipo",
+            Toast.makeText(this, R.string.introduce_datos,
                     Toast.LENGTH_LONG).show();
         } else{
             final StorageReference fotoRef = mFotoStorageRef
@@ -106,9 +106,9 @@ public class CrearGrupo extends AppCompatActivity {
     public void adjuntarFoto(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/jpeg");
-        intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
+        intent.putExtra(Intent.CATEGORY_APP_GALLERY, true);
         startActivityForResult(Intent.createChooser(intent,
-                "Complete la acción usando"), RC_PHOTO_ADJ);
+                "abriendo galeria"), RC_PHOTO_ADJ);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
