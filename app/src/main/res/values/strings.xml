@@ -35,4 +35,5 @@
     <string name="title_activity_mapa">Map</string>
     <string name="crear_grupo">Crear Grupo</string>
     <string name="introduce_datos">Debe de introducir un nombre, una descripcion y un tipo</string>
+    <string name="error_lectura">No se ha podido leer el dato</string>
 </resources>
