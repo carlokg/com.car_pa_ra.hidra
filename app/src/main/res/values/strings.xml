@@ -5,7 +5,7 @@
     <string name="hint_email">Correo electrónico</string>
     <string name="hint_pw">Contraseña</string>
     <string name="hint_pw2">Repetir contraseña</string>
-    <string name="hint_dir">Dirección</string>
+    <string name="hint_dir">Ciudad</string>
     <string name="hint_desc">Cuéntanos un poco sobre tí</string>
     <string name="btn_registro">Regístrate</string>
     <string name="tv_iniciar">Iniciar Sesión</string>
@@ -33,4 +33,6 @@
     <string name="cerrar_dialogo">Cerrar ajustes</string>
     <string name="descripcion">Descripción</string>
     <string name="title_activity_mapa">Map</string>
+    <string name="crear_grupo">Crear Grupo</string>
+    <string name="introduce_datos">Debe de introducir un nombre, una descripcion y un tipo</string>
 </resources>
