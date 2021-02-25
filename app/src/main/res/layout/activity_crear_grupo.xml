@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp16"
+    tools:context=".CrearGrupo">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNomGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDescGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etNomGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion del grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etTipoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etDescGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo del grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ToggleButton
+            android:id="@+id/tglbtnAS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etTipoGrupo"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_centerHorizontal="true"
+            android:textOn="Ayuda"
+            android:textOff="Social"/>
+
+        <LinearLayout
+            android:id="@+id/llFoto"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@id/tglbtnAS"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ibAdjuntarFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                android:background="@color/white"
+                android:onClick="adjuntarFoto"/>
+
+            <ImageView
+                android:id="@+id/ivFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llFoto"
+            android:layout_marginTop="@dimen/dp32"
+            android:onClick="crearGrupo"
+            style="@style/HidraButton"
+            android:text="Crear Grupo"/>
+    </RelativeLayout>
+</ScrollView>

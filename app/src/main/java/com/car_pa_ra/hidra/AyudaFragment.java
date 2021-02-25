@@ -39,14 +39,14 @@ public class AyudaFragment extends Fragment {
 
         List<Grupos> items = new ArrayList<>();
 
-        items.add(new Grupos(R.drawable.deporte, "Titulo1", "Navig ation, A simple" +
+        items.add(new Grupos("Ayuda","0", "Titulo1", "Navig ation, A simple" +
                 " solution is to declare an inte rface which is declaring the Depen dencies required "
                 , "Deporte"));
-        items.add(new Grupos(R.drawable.deporte, "Titulo2", "2", "Cocina"));
-        items.add(new Grupos(R.drawable.deporte, "Titulo3", "3", "Deporte"));
-        items.add(new Grupos(R.drawable.deporte, "Titulo4", "4", "Cocina"));
-        items.add(new Grupos(R.drawable.deporte, "Titulo5", "5", "Deporte"));
-        items.add(new Grupos(R.drawable.anim3, "Titulo6", "6", "Cocina"));
+        items.add(new Grupos("Ayuda","0", "Titulo2", "2", "Cocina"));
+        items.add(new Grupos("Ayuda","0", "Titulo3", "3", "Deporte"));
+        items.add(new Grupos("Ayuda","0", "Titulo4", "4", "Cocina"));
+        items.add(new Grupos("Ayuda","0", "Titulo5", "5", "Deporte"));
+        items.add(new Grupos("Ayuda","0", "Titulo6", "6", "Cocina"));
 
 
         recycler = view.findViewById(R.id.rvExplora);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hidra</string>
+    <string name="app_name">HIDRA</string>
     <string name="foto_login">Foto login</string>
     <string name="hint_nombre_usuario">Nombre de usuario</string>
     <string name="hint_email">Correo electrónico</string>
@@ -29,5 +29,8 @@
     <string name="title">Titulo</string>
     <string name="secondary_text">Descripcion</string>
     <string name="deporte">Deporte</string>
+    <string name="txt_notificaciones">Notificaciones</string>
+    <string name="cerrar_dialogo">Cerrar ajustes</string>
     <string name="descripcion">Descripción</string>
+    <string name="title_activity_mapa">Map</string>
 </resources>

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.car_pa_ra.hidra">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_icono2"
@@ -9,6 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_ap"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".MapaActivity"
+            android:label="@string/title_activity_mapa"></activity>
+
+        <activity android:name=".CrearGrupo"></activity>
         <activity
             android:name=".Splash"
             android:theme="@style/splashTheme">
@@ -21,10 +31,14 @@
         <activity android:name=".Login" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity" />
-
         <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

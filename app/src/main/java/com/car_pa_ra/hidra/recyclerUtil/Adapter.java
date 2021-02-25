@@ -49,7 +49,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.GrupoViewHolder holder, int position) {
-        holder.imagen.setImageResource(items.get(position).getImagen());
+        //holder.imagen.setImageResource(items.get(position).getImagen());
         holder.titulo.setText(items.get(position).getTitulo());
         holder.descripcion.setText(items.get(position).getDescripcion());
         holder.tipo.setText(items.get(position).getTipo());

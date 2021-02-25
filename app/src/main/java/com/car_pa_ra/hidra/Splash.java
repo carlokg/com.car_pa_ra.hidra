@@ -22,9 +22,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        imgApp = findViewById(R.id.imgApp);
         fondo = findViewById(R.id.fondo);
-        Glide.with(this).load(R.drawable.ic_icon_claro).into(imgApp);
         fondo.setBackgroundResource(R.drawable.splash_anim);
 
         AnimationDrawable progressAnimation = (AnimationDrawable) fondo.getBackground();

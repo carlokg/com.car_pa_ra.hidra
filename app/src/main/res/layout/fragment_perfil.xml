@@ -45,98 +45,96 @@
         android:id="@+id/llPerfil2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/llPerfil1"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:background="@drawable/layout_bg"
+        android:clipToPadding="false"
+        android:elevation="@dimen/dp8"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="@dimen/dp16"
-        android:gravity="center_horizontal"
-        android:background="@drawable/layout_bg"
-        android:layout_marginStart="@dimen/dp32"
-        android:layout_marginEnd="@dimen/dp32"
-        android:elevation="@dimen/dp8"
-        android:clipToPadding="false"
-        >
+        app:layout_constraintTop_toBottomOf="@id/llPerfil1"
+        tools:layout_editor_absoluteX="196dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/llPerfil2"
-            android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Social"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/dp16"
-                android:textColor="@color/colorPrimarioOscuro"/>
+                android:text="Social"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
 
             <TextView
                 android:id="@+id/tvNsocial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/sp24"
-                android:textColor="@color/colorAcento"/>
+                android:text="7"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/llPerfil2"
-            android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ayuda"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/dp16"
-                android:textColor="@color/colorPrimarioOscuro"/>
+                android:text="Ayuda"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
 
             <TextView
                 android:id="@+id/tvNayuda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/sp24"
-                android:textColor="@color/colorAcento"/>
+                android:text="5"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/llPerfil2"
-            android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valoración"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/dp16"
-                android:textColor="@color/colorPrimarioOscuro"/>
+                android:text="Valoración"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
 
             <TextView
                 android:id="@+id/tvNvaloracion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9.5"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/sp24"
-                android:textColor="@color/colorAcento"/>
+                android:text="9.5"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
 
         </LinearLayout>
 
