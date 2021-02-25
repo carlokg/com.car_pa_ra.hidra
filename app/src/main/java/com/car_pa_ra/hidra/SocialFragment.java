@@ -23,25 +23,25 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class AyudaFragment extends Fragment {
+public class SocialFragment extends Fragment {
+
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager llm;
 
     MaterialButton btnCrear;
+    MaterialButton btnAyuda;
     MaterialButton btnExplora;
-    MaterialButton btnSocial;
 
     DatabaseReference dbRef;
     ValueEventListener vel;
 
     private ArrayList<Grupos> lGrupos;
 
-    public AyudaFragment() {
+    public SocialFragment() {
+        // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,19 +53,14 @@ public class AyudaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_ayuda, container, false);
+        View view = inflater.inflate(R.layout.fragment_social, container, false);
 
         dbRef = FirebaseDatabase.getInstance()
                 .getReference("datos/grupo");
 
-        recycler = view.findViewById(R.id.rvExplora);
-        recycler.setHasFixedSize(true);
-
-        lGrupos = new ArrayList<Grupos>();
-
-        btnCrear = view.findViewById(R.id.btnCrearA);
-        btnExplora = view.findViewById(R.id.btnExploraA);
-        btnSocial = view.findViewById(R.id.btnSocialA);
+        btnCrear = view.findViewById(R.id.btnCrearS);
+        btnExplora = view.findViewById(R.id.btnExploraS);
+        btnAyuda = view.findViewById(R.id.btnAyudaS);
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +69,7 @@ public class AyudaFragment extends Fragment {
                 startActivity(i);
             }
         });
+
         btnExplora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,16 +80,24 @@ public class AyudaFragment extends Fragment {
                         .commit();
             }
         });
-        btnSocial.setOnClickListener(new View.OnClickListener() {
+        btnAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new SocialFragment())
+                        .replace(R.id.fragment_container, new AyudaFragment())
                         .addToBackStack(null)
                         .commit();
             }
         });
+
+        recycler = view.findViewById(R.id.rvExplora);
+        recycler.setHasFixedSize(true);
+
+
+
+        lGrupos = new ArrayList<Grupos>();
+
 
         return view;
     }
@@ -119,7 +123,7 @@ public class AyudaFragment extends Fragment {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     Grupos g;
                     for (DataSnapshot dss: dataSnapshot.getChildren()) {
-                        if(dss.getValue(Grupos.class).getAyuSoc().equals("Ayuda")){
+                        if(dss.getValue(Grupos.class).getAyuSoc().equals("Social")){
                             g = dss.getValue(Grupos.class);
                             lGrupos.add(g);
                         }
@@ -151,8 +155,8 @@ public class AyudaFragment extends Fragment {
         }
     }
 
-
-    public void goSocial(View view){
-
+    public void crear(View view){
+        Intent i = new Intent(getContext(), CrearGrupoActivity.class);
+        startActivity(i);
     }
 }

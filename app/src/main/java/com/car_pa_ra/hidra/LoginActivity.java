@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         ImageView imgLogin;
         TextInputLayout etNomUsuario;
         TextInputLayout etPw;
-        Button btnRegistrarse;
         private FirebaseAuth fba;
         private FirebaseUser user;
 
@@ -36,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
 
             etNomUsuario = findViewById(R.id.etNomUsuario);
             etPw = findViewById(R.id.etPw);
-            btnRegistrarse = findViewById(R.id.btnRegistrarse);
             fba = FirebaseAuth.getInstance();
             user = fba.getCurrentUser();
 

@@ -114,6 +114,6 @@
             android:onClick="crearGrupo"
             style="@style/HidraButton"
             android:fontFamily="@font/catamaran_medium"
-            android:text="@string/crear_grupo"/>
+            android:text="@string/crear"/>
     </RelativeLayout>
 </ScrollView>

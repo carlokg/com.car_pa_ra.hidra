@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ExploraFragment">
+    tools:context=".SocialFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimario"
             android:textColor="@color/colorPrimarioOscuro"
-            android:text="@string/explora"
+            android:text="@string/social"
             android:padding="@dimen/dp8"
             android:fontFamily="@font/catamaran_medium"
             android:textSize="@dimen/sp32">
@@ -31,7 +31,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAyuda"
+                android:id="@+id/btnAyudaS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ayuda"
@@ -41,7 +41,7 @@
                 style="@style/HidraButton">
             </com.google.android.material.button.MaterialButton>
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCrear"
+                android:id="@+id/btnCrearS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/crear"
@@ -53,10 +53,10 @@
                 style="@style/boton_crear">
             </com.google.android.material.button.MaterialButton>
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSocial"
+                android:id="@+id/btnExploraS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/social"
+                android:text="@string/explora"
                 android:layout_weight="1"
                 android:layout_marginLeft="@dimen/dp8"
                 app:layout_constraintTop_toBottomOf="@id/etPw"
@@ -72,4 +72,6 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical"/>
     </LinearLayout>
+
+
 </FrameLayout>

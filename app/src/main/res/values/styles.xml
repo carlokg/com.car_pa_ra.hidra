@@ -39,6 +39,12 @@
         <item name="backgroundTint">@color/statelist_btn_reg</item>
     </style>
 
+    <style name="boton_crear" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
+        <item name="backgroundTint">@color/statelist_btn_crear</item>
+        <item name="android:textColor">@color/colorAcento</item>
+    </style>
+
     <style name="MyShapeAppearance" parent="">
         <item name="cornerFamilyTopLeft">rounded</item>
         <item name="cornerFamilyBottomLeft">rounded</item>

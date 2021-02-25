@@ -1,11 +1,13 @@
 package com.car_pa_ra.hidra;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,8 @@ public class PerfilFragment  extends Fragment {
     TextView tvDescripcion;
     TextView tvCorreoUsuario;
     TextView tvLocalizacion;
+
+    LinearLayout llLocation;
     DatabaseReference dbRef;
     ValueEventListener vel;
     Usuario user = new Usuario();
@@ -65,8 +69,17 @@ public class PerfilFragment  extends Fragment {
         tvDescripcion = view.findViewById(R.id.tvDescripcion);
         tvCorreoUsuario = view.findViewById(R.id.tvCorreoUsuario);
         tvLocalizacion = view.findViewById(R.id.tvLocalizacion);
+        llLocation = view.findViewById(R.id.llLocation);
         fba = FirebaseAuth.getInstance();
         userFb = fba.getCurrentUser();
+
+        llLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), MapaActivity.class);
+                startActivity(i);
+            }
+        });
 
         dbRef = FirebaseDatabase.getInstance().getReference("datos/usuario");
 

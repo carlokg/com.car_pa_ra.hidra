@@ -1,5 +1,6 @@
 package com.car_pa_ra.hidra;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.Adapter;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,11 +27,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ExploraFragment extends Fragment {
+public class ExploraFragment extends Fragment{
 
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager llm;
+
+    MaterialButton btnCrear;
+    MaterialButton btnAyuda;
+    MaterialButton btnSocial;
 
     DatabaseReference dbRef;
     ValueEventListener vel;
@@ -46,6 +52,7 @@ public class ExploraFragment extends Fragment {
 
 
 
+
     }
 
     @Override
@@ -55,6 +62,38 @@ public class ExploraFragment extends Fragment {
 
         dbRef = FirebaseDatabase.getInstance()
                 .getReference("datos/grupo");
+
+        btnCrear = view.findViewById(R.id.btnCrear);
+        btnAyuda = view.findViewById(R.id.btnAyuda);
+        btnSocial = view.findViewById(R.id.btnSocial);
+
+        btnCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), CrearGrupoActivity.class);
+                startActivity(i);
+            }
+        });
+        btnAyuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new AyudaFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        btnSocial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new SocialFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         recycler = view.findViewById(R.id.rvExplora);
         recycler.setHasFixedSize(true);

@@ -55,9 +55,7 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
-                    Intent i = new Intent(getApplicationContext(), CrearGrupoActivity.class);
-                    startActivity(i);
-                    //selectedFragment = new AyudaFragment();
+                    selectedFragment = new SocialFragment();
                     break;
                 case R.id.perfil:
                     selectedFragment = new PerfilFragment();
