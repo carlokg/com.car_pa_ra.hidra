@@ -1,5 +1,6 @@
 package com.car_pa_ra.hidra.recyclerUtil;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.car_pa_ra.hidra.R;
 import com.car_pa_ra.hidra.model.Grupos;
 
@@ -29,15 +31,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
 
         public GrupoViewHolder(View v) {
             super(v);
-            imagen = (ImageView) v.findViewById(R.id.imagen);
-            titulo = (TextView) v.findViewById(R.id.titulo);
-            descripcion = (TextView) v.findViewById(R.id.descripcion);
-            tipo = (TextView) v.findViewById(R.id.tipo);
+            imagen =  v.findViewById(R.id.imagen);
+            titulo =  v.findViewById(R.id.titulo);
+            descripcion =  v.findViewById(R.id.descripcion);
+            tipo = v.findViewById(R.id.tipo);
         }
     }
 
     public Adapter(List<Grupos> items) {
         this.items = items;
+
     }
 
     @Override
@@ -49,7 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.GrupoViewHolder holder, int position) {
-        //holder.imagen.setImageResource(items.get(position).getImagen());
+        holder.imagen.setImageResource(R.drawable.perfil);
         holder.titulo.setText(items.get(position).getTitulo());
         holder.descripcion.setText(items.get(position).getDescripcion());
         holder.tipo.setText(items.get(position).getTipo());
