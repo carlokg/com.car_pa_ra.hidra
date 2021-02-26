@@ -77,6 +77,7 @@ public class PerfilFragment  extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getContext(), MapaActivity.class);
+                i.putExtra( "LOCATION", user.getDir() );
                 startActivity(i);
             }
         });
