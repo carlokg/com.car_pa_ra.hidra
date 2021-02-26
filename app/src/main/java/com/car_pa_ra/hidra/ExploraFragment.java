@@ -122,6 +122,7 @@ public class ExploraFragment extends Fragment{
             vel = new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    lGrupos.clear();
                     Grupos g;
                     for (DataSnapshot dss: dataSnapshot.getChildren()) {
                         g = dss.getValue(Grupos.class);

@@ -1,18 +1,16 @@
 package com.car_pa_ra.hidra.recyclerUtil;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.car_pa_ra.hidra.R;
 import com.car_pa_ra.hidra.model.Grupos;
+
 
 import java.util.List;
 
@@ -52,7 +50,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.GrupoViewHolder holder, int position) {
-        holder.imagen.setImageResource(R.drawable.perfil);
+        Glide.with(holder.imagen)
+                .load(items.get(position).getImagen())
+                .into(holder.imagen);
         holder.titulo.setText(items.get(position).getTitulo());
         holder.descripcion.setText(items.get(position).getDescripcion());
         holder.tipo.setText(items.get(position).getTipo());
