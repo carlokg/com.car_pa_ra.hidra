@@ -10,7 +10,7 @@
         android:id="@+id/clAboutus"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimario"
+        android:background="@color/colorFondo"
         android:padding="@dimen/dp16">
 
         <TextView
@@ -20,6 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="@dimen/dp16"
+            android:fontFamily="@font/catamaran_extralight"
             android:textSize="@dimen/sp32"
             android:text="@string/btn_about" />
 
@@ -34,6 +35,7 @@
             android:layout_marginStart="@dimen/dp16"
             android:layout_marginEnd="@dimen/dp16"
             android:textSize="@dimen/sp16"
+            android:fontFamily="@font/catamaran_extralight"
             android:text="@string/content_about_us"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

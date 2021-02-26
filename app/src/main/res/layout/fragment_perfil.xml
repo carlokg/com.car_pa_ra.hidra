@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llPerfil1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imgUsuario"
+            android:layout_width="@dimen/dp104"
+            android:layout_height="@dimen/dp104"
+            android:layout_marginTop="@dimen/dp24"
+            android:contentDescription="@string/foto_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="@dimen/dp240"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintTop_toBottomOf="@id/imgUsuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Nombre Apellido Usuario"
+            android:textSize="@dimen/sp32"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp16"
+            android:textColor="@color/colorPrimarioOscuro"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPerfil2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:background="@drawable/layout_bg"
+        android:clipToPadding="false"
+        android:elevation="@dimen/dp8"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp16"
+        app:layout_constraintTop_toBottomOf="@id/llPerfil1"
+        tools:layout_editor_absoluteX="196dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Social"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvNsocial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="7"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Ayuda"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvNayuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="5"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llPerfil2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Valoración"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tvNvaloracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="9.5"
+                android:textColor="@color/colorAcento"
+                android:textSize="@dimen/sp24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llPerfil2"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/colorAcento"/>
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amante de los deportes y la tecnología, con ganas de ayudar y encontrar nuevas personas con gustos similares a los míos."
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/colorPrimarioOscuro"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_marginTop="@dimen/dp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llDescripcion" />
+
+    <LinearLayout
+        android:id="@+id/llCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        >
+
+        <ImageView
+            android:id="@+id/imgArroba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/foto_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arroba"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tvCorreoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="usuario1@gmail.com"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        style="@style/Divider"
+        android:layout_marginTop="@dimen/dp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llCorreo" />
+
+
+    <LinearLayout
+        android:id="@+id/llLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        >
+
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/foto_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/location"
+            tools:ignore="VectorDrawableCompat"
+            />
+
+         <TextView
+             android:id="@+id/tvLocalizacion"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Ubicación del usuario"
+             android:textSize="@dimen/sp16"
+             android:textColor="@color/colorPrimarioOscuro"
+             android:layout_marginStart="@dimen/dp8"
+             android:layout_marginEnd="@dimen/dp8"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

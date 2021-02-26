@@ -1,25 +1,35 @@
 package com.car_pa_ra.hidra;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Clase MainActivity contendrá la barra de navegación y sobre este activity se cargarán
+ * Todos los fragmentos de la aplicación, de tal forma que la barra estará presente en
+ * todos los Fragmentos.
+ * @see MainActivity
+ * @see AboutFragment
+ *
 
+ */
 public class MainActivity extends AppCompatActivity
         implements OnControlerFragmentListener{
 
     FirebaseAuth fba;
+    AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         fba = FirebaseAuth.getInstance();
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AlgorithmFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploraFragment()).commit();
 
     }
 
@@ -41,30 +51,49 @@ public class MainActivity extends AppCompatActivity
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.explora:
-                    //selectedFragment = new AlgorithmFragment();
+
+                    selectedFragment = new ExploraFragment();
                     break;
                 case R.id.social:
-                    //selectedFragment = new MapaActivity();
+                    selectedFragment = new SocialFragment();
                     break;
                 case R.id.perfil:
-                    //selectedFragment = new ProfileFragment();
+                    selectedFragment = new PerfilFragment();
                     break;
                 case R.id.ayuda:
-                    //selectedFragment = new ProfileFragment();
+                    selectedFragment = new AyudaFragment();
                     break;
                 case R.id.config:
-                    selectedFragment = new AjustesFragment();
+                    showAlertDialogButtonClicked(MainActivity.this);
                     break;
             }
 
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, selectedFragment)
-                    .addToBackStack(null)
-                    .commit();
+
+           if(selectedFragment != null){
+               getSupportFragmentManager()
+                       .beginTransaction()
+                       .replace(R.id.fragment_container, selectedFragment)
+                       .addToBackStack(null)
+                       .commit();
+           }
+
+
+
             return true;
         }
     };
+
+    private void showAlertDialogButtonClicked(MainActivity mainActivity) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setView(getLayoutInflater().inflate(R.layout.expandable_ajustes,
+                null));
+
+
+        dialog = builder.create();
+        dialog.show();
+    }
 
 
     @Override
@@ -78,15 +107,33 @@ public class MainActivity extends AppCompatActivity
                 break;
             case "logout":
                 fba.signOut();
-                Intent i = new Intent(this, Login.class);
+                Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 finish();
                 break;
         }
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, selectedFragment)
                 .addToBackStack(null)
                 .commit();
+    }
+
+    public void aboutUs(View view) {
+        Fragment selectedFragment = new AboutFragment();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, selectedFragment)
+                .addToBackStack(null)
+                .commit();
+
+        dialog.dismiss();
+    }
+
+    public void logOut(View view) {
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
     }
 }

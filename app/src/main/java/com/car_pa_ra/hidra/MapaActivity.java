@@ -38,6 +38,8 @@ public class MapaActivity extends FragmentActivity implements OnMapReadyCallback
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
 
+
+
     }
 
     @Override

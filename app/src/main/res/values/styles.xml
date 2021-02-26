@@ -10,7 +10,7 @@
     <style name="splashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimario</item>
-        <item name="colorPrimaryDark">@color/colorPrimarioOscuro</item>
+        <item name="colorPrimaryDark">@color/colorBarraSplash</item>
         <item name="colorAccent">@color/colorAcento</item>
     </style>
 
@@ -24,9 +24,41 @@
     <style name="HidraButton"
         parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/statelist</item>
-        <item name="cornerRadius">30dp</item>
+        <item name="cornerRadius">3dp</item>
+    </style>
+
+    <style name="HidraButtonAjustes"
+        parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/statelist_btn_ajustes</item>
+        <item name="cornerRadius">3dp</item>
     </style>
 
 
+    <style name="boton_reg" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
+        <item name="backgroundTint">@color/statelist_btn_reg</item>
+    </style>
+
+    <style name="boton_crear" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
+        <item name="backgroundTint">@color/statelist_btn_crear</item>
+        <item name="android:textColor">@color/colorAcento</item>
+    </style>
+
+    <style name="MyShapeAppearance" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSize">3dp</item>
+
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+        <item name="android:colorBackground">@color/colorAcento</item>
+    </style>
 
 </resources>
