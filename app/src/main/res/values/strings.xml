@@ -24,7 +24,16 @@
     <string name="btn_about">About Us</string>
     <string name="btn_logout">Log out</string>
     <string name="btn_help">Ayuda</string>
-    <string name="content_about_us">La idea es poner en contacto a gente utilizando principalmente la ubicación y la cercanía entre los usuarios. Se podrá establecer un radio máximo para ver los anuncios empleando un filtro. Se podrán crear tres tipos de grupos con enfoques diferentes: Ayudante (prestará servicio de ayuda a otro usuario), Solicitante de ayuda (Solicitará ayuda a cualquier usuario de la aplicación que se preste a ello), Grupo social (Para compartir aficiones comunes como actividades deportivas, culturales, o cualquier tipo de afición)</string>
+    <string name="content_about_us">Somos Pablo López, Carlos García y Raúl García, estudiantes de
+        la Universidad Europea en el campus de Alcobendas.
+        \nHemos desarrollado esta aplicación como proyecto integrador del ciclo formativo de
+        Desarrollo de Aplicaciones Multiplataforma, en el curso de 2019/2021.
+        \nHa sido una experiencia genial y estamos muy contentos con los resultados obtenidos en
+        la aplicación, tanto a nivel funcional como de diseño. Pensamos que con algún retoque
+        podría ser una aplicación muy útil.
+        \nAgradecer a los profesores Pilar Martín y Ernesto Ramiro la formación y ayuda prestada
+        para que este proyecto haya sido posible.
+    </string>
     <string name="img_tarjeta">imagen tarjeta</string>
     <string name="title">Titulo</string>
     <string name="secondary_text">Descripcion</string>
@@ -41,4 +50,7 @@
     <string name="tvUbicacionEjemplo">Madrid</string>
     <string name="tvDescripcionEjemplo">Aquí mostraremos la descripción del grupo donde los usuario podrán describir brevemente que se hará en estos grupos e incluir lugare de reunión y horarios.</string>
     <string name="tvTipoGrupoEjemplo">Ayuda</string>
+    <string name="carlos">Carlos</string>
+    <string name="pablo">Pablo</string>
+    <string name="raul">Raúl</string>
 </resources>
