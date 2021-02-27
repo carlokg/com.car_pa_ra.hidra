@@ -40,4 +40,7 @@ y tiene el nombre de la aplicación sobre la animación.
                 iniciar sesión o crear cuenta.
                 *  **AboutFragment** Si se pulsa sobre este elemento de la ventana emergente,
                 se cargará un fragmento con información de los desarrolladores.
-                    
+                
+*    **Capturas de la app:**
+
+![](img/sc_hidra_splash.png)  ![](img/sc_hidra_login.png) | ![](img/sc_hidra_registro.png)
