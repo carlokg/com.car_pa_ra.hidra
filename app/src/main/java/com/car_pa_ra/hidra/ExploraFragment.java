@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.Adapter;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,11 +33,6 @@ public class ExploraFragment extends Fragment{
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager llm;
-
-    MaterialButton btnCrear;
-    MaterialButton btnAyuda;
-    MaterialButton btnSocial;
-
     DatabaseReference dbRef;
     ValueEventListener vel;
 
@@ -49,10 +45,6 @@ public class ExploraFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
     }
 
     @Override
@@ -63,35 +55,13 @@ public class ExploraFragment extends Fragment{
         dbRef = FirebaseDatabase.getInstance()
                 .getReference("datos/grupo");
 
-        btnCrear = view.findViewById(R.id.btnCrear);
-        btnAyuda = view.findViewById(R.id.btnAyuda);
-        btnSocial = view.findViewById(R.id.btnSocial);
+        FloatingActionButton fabCrearGrupo = (FloatingActionButton) view.findViewById(R.id.fabCrearGrupo);
+        fabCrearGrupo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
-        btnCrear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 Intent i = new Intent(getActivity(), CrearGrupoActivity.class);
                 startActivity(i);
-            }
-        });
-        btnAyuda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new AyudaFragment())
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        btnSocial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new SocialFragment())
-                        .addToBackStack(null)
-                        .commit();
+
             }
         });
 

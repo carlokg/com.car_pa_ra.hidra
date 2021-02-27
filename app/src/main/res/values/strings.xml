@@ -37,4 +37,8 @@
     <string name="introduce_datos">Debe de introducir un nombre, una descripcion y un tipo</string>
     <string name="error_lectura">No se ha podido leer el dato</string>
     <string name="crear">crear</string>
+    <string name="nombreGrupo">Nombre grupo</string>
+    <string name="tvUbicacionEjemplo">Madrid</string>
+    <string name="tvDescripcionEjemplo">Aquí mostraremos la descripción del grupo donde los usuario podrán describir brevemente que se hará en estos grupos e incluir lugare de reunión y horarios.</string>
+    <string name="tvTipoGrupoEjemplo">Ayuda</string>
 </resources>

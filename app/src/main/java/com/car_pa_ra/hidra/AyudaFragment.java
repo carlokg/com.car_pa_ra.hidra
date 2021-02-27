@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.Adapter;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,10 +30,6 @@ public class AyudaFragment extends Fragment {
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager llm;
-
-    MaterialButton btnCrear;
-    MaterialButton btnExplora;
-    MaterialButton btnSocial;
 
     DatabaseReference dbRef;
     ValueEventListener vel;
@@ -63,35 +60,13 @@ public class AyudaFragment extends Fragment {
 
         lGrupos = new ArrayList<Grupos>();
 
-        btnCrear = view.findViewById(R.id.btnCrearA);
-        btnExplora = view.findViewById(R.id.btnExploraA);
-        btnSocial = view.findViewById(R.id.btnSocialA);
+        FloatingActionButton fabCrearGrupo = (FloatingActionButton) view.findViewById(R.id.fabCrearGrupo);
+        fabCrearGrupo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
-        btnCrear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 Intent i = new Intent(getActivity(), CrearGrupoActivity.class);
                 startActivity(i);
-            }
-        });
-        btnExplora.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new ExploraFragment())
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        btnSocial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new SocialFragment())
-                        .addToBackStack(null)
-                        .commit();
+
             }
         });
 
@@ -118,6 +93,7 @@ public class AyudaFragment extends Fragment {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     Grupos g;
+                    lGrupos.clear();
                     for (DataSnapshot dss: dataSnapshot.getChildren()) {
                         if(dss.getValue(Grupos.class).getAyuSoc().equals("Ayuda")){
                             g = dss.getValue(Grupos.class);
