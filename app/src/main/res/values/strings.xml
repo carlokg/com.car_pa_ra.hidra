@@ -22,7 +22,7 @@
     <string name="msj_pw_iguales">Las contraseñas introducidas no coinciden</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_about">About Us</string>
-    <string name="btn_logout">Log out</string>
+    <string name="btn_logout">Salir de HIDRA</string>
     <string name="btn_help">Ayuda</string>
     <string name="content_about_us">Somos Pablo López, Carlos García y Raúl García, estudiantes de
         la Universidad Europea en el campus de Alcobendas.
