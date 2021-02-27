@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +17,7 @@ import android.widget.Toast;
 
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.Adapter;
+import com.car_pa_ra.hidra.recyclerUtil.MyViewModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -28,11 +31,12 @@ import java.util.ArrayList;
 public class SocialFragment extends Fragment {
 
     private RecyclerView recycler;
-    private RecyclerView.Adapter adapter;
+    private Adapter adapter;
     private RecyclerView.LayoutManager llm;
 
     DatabaseReference dbRef;
     ValueEventListener vel;
+    private MyViewModel viewModel;
 
     private ArrayList<Grupos> lGrupos;
 
@@ -60,6 +64,8 @@ public class SocialFragment extends Fragment {
         recycler = view.findViewById(R.id.rvExplora);
         recycler.setHasFixedSize(true);
 
+        viewModel = ViewModelProviders.of((FragmentActivity) getActivity()).get( MyViewModel.class);
+
         FloatingActionButton fabCrearGrupo = (FloatingActionButton) view.findViewById(R.id.fabCrearGrupo);
         fabCrearGrupo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -81,6 +87,19 @@ public class SocialFragment extends Fragment {
         recycler.setLayoutManager(llm);
 
         adapter = new Adapter(lGrupos);
+        adapter.setListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int gNum = recycler.getChildAdapterPosition( v);
+                Grupos g = lGrupos.get( gNum );
+                viewModel.setG( g );
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new InfoGrupoFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        } );
         recycler.setAdapter(adapter);
     }
 
