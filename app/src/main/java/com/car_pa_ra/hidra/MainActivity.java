@@ -23,7 +23,6 @@ import com.google.firebase.auth.FirebaseAuth;
  * @see MainActivity
  * @see AboutFragment
  *
-
  */
 public class MainActivity extends AppCompatActivity
         implements OnControlerFragmentListener{
