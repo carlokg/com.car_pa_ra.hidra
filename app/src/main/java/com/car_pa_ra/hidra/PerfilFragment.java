@@ -60,8 +60,6 @@ public class PerfilFragment  extends Fragment {
         View view = inflater.inflate(R.layout.fragment_perfil, container, false);
 
         imgUsuario = view.findViewById(R.id.imgUsuario);
-        Glide.with(this).load(R.drawable.perfil).into(imgUsuario);
-
         tvUsername = view.findViewById(R.id.tvUsername);
         tvNsocial = view.findViewById(R.id.tvNsocial);
         tvNayuda = view.findViewById(R.id.tvNayuda);

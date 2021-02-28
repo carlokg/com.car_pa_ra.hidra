@@ -70,9 +70,7 @@ public class CrearGrupoActivity extends AppCompatActivity {
                 else swtAS.setText( R.string.social );
             }
         });
-
     }
-
 
     public void crearGrupo(View v){
         final String nomG = etNomG.getEditText().getText().toString().trim();
@@ -85,9 +83,12 @@ public class CrearGrupoActivity extends AppCompatActivity {
         if(swtAS.isChecked())tglCheck = "Ayuda";
         else  tglCheck = "Social";
 
+        if(etNomG.getEditText().getText().toString().isEmpty()||
+                etDescG.getEditText().getText().toString().isEmpty()||
+                etUbiG.getEditText().getText().toString().isEmpty()||
+                etTipoG.getEditText().getText().toString().isEmpty()){
 
-        if(etNomG.getEditText().getText().toString().isEmpty()){
-            Toast.makeText(this, String.valueOf( R.string.crear_g_no_data ),
+            Toast.makeText(this, String.valueOf(R.string.no_data),
                     Toast.LENGTH_LONG).show();
         } else{
             final StorageReference fotoRef = mFotoStorageRef

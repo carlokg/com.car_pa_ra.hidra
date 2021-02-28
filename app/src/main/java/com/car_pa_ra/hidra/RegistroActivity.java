@@ -80,9 +80,6 @@ public class RegistroActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                //if(selectedUri == null){
-                                //    selectedUri = Uri.parse(String.valueOf(R.drawable.ic_launcher_foreground));
-                                //}
 
                                 user = fba.getCurrentUser();
                                 final StorageReference fotoRef = mFotoStorageRef

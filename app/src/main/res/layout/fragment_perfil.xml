@@ -33,7 +33,6 @@
             app:layout_constraintTop_toBottomOf="@id/imgUsuario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Nombre Apellido Usuario"
             android:textSize="@dimen/sp32"
             android:gravity="center_horizontal"
             android:layout_marginBottom="@dimen/dp16"
@@ -162,7 +161,6 @@
             android:id="@+id/tvDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amante de los deportes y la tecnología, con ganas de ayudar y encontrar nuevas personas con gustos similares a los míos."
             android:textSize="@dimen/sp16"
             android:textColor="@color/colorPrimarioOscuro"/>
 
@@ -203,7 +201,6 @@
             android:id="@+id/tvCorreoUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="usuario1@gmail.com"
             android:textSize="@dimen/sp16"
             android:textColor="@color/colorPrimarioOscuro"
             android:layout_marginStart="@dimen/dp8"
@@ -248,7 +245,6 @@
              android:id="@+id/tvLocalizacion"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Ubicación del usuario"
              android:textSize="@dimen/sp16"
              android:textColor="@color/colorPrimarioOscuro"
              android:layout_marginStart="@dimen/dp8"
