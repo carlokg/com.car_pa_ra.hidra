@@ -12,15 +12,27 @@
 
         <TextView
             android:id="@+id/tvNombreGrupo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="@dimen/dp16"
             android:text="@string/nombreGrupo"
             android:textSize="@dimen/sp32"
+            app:layout_constraintStart_toStartOf="parent"
             android:textColor="@color/colorAcento"
             android:fontFamily="@font/catamaran_medium"
             />
+
+        <ImageView
+            android:id="@+id/ivTipoGrupo"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/sp24"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp8"
+            app:layout_constraintStart_toEndOf="@+id/tvNombreGrupo"
+            app:layout_constraintBottom_toTopOf="@id/llGrupo"
+            app:tint="@color/colorAcento" />
 
         <LinearLayout
             android:id="@+id/llGrupo"
@@ -31,9 +43,10 @@
 
             <TextView
                 android:id="@+id/tvUbicacion"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp16"
                 android:text="@string/tvUbicacionEjemplo"
                 android:textSize="@dimen/sp16"
                 android:textColor="@color/colorPrimarioOscuro"
@@ -43,8 +56,9 @@
 
             <TextView
                 android:id="@+id/tvTipoGrupo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
                 android:layout_margin="@dimen/dp16"
                 android:text="@string/tvTipoGrupoEjemplo"
                 android:textSize="@dimen/sp16"
@@ -60,8 +74,8 @@
 
         <ImageView
             android:id="@+id/ivImagenGrupo"
-            android:layout_width="@dimen/dp240"
-            android:layout_height="@dimen/dp320"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp240"
             app:layout_constraintTop_toBottomOf="@+id/llGrupo"
             android:layout_marginTop="@dimen/dp16"
             app:layout_constraintEnd_toEndOf="parent"

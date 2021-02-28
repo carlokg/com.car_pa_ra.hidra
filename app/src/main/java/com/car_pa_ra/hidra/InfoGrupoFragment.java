@@ -27,6 +27,7 @@ class InfoGrupoFragment extends Fragment {
     TextView tvTipoGrupo;
     TextView tvDescripcionGrupo;
     ImageView ivImagenGrupo;
+    ImageView ivTipoGrupo;
 
     private MyViewModel viewModel;
 
@@ -52,18 +53,32 @@ class InfoGrupoFragment extends Fragment {
         tvNombreGrupo = view.findViewById(R.id.tvNombreGrupo);
         tvUbicacion = view.findViewById(R.id.tvUbicacion);
         tvTipoGrupo = view.findViewById(R.id.tvTipoGrupo);
+        ivTipoGrupo = view.findViewById(R.id.ivTipoGrupo);
         tvDescripcionGrupo = view.findViewById(R.id.tvDescripcionGrupo);
 
         viewModel = ViewModelProviders.of((FragmentActivity) getActivity()).get(MyViewModel.class);
         Grupos gAc = viewModel.getG();
 
+        if(gAc.getAyuSoc().toLowerCase().equals("ayuda")){
+            Glide.with(ivTipoGrupo.getContext())
+                    .load(R.drawable.ic_appbar_ayuda)
+                    .into(ivTipoGrupo);
+        } else{
+            Glide.with(ivTipoGrupo.getContext())
+                    .load(R.drawable.ic_appbar_social)
+                    .into(ivTipoGrupo);
+        }
+
+
         Glide.with(ivImagenGrupo.getContext())
                 .load(gAc.getImagen())
                 .into(ivImagenGrupo);
 
+
+
         tvNombreGrupo.setText( gAc.getTitulo() );
         tvUbicacion.setText( gAc.getUbicacion() );
-        tvTipoGrupo.setText( gAc.getAyuSoc() );
+        tvTipoGrupo.setText( gAc.getTipo() );
         tvDescripcionGrupo.setText( gAc.getDescripcion() );
 
         return view;
