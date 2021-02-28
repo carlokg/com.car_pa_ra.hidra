@@ -1,5 +1,7 @@
 package com.car_pa_ra.hidra;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -8,6 +10,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -41,24 +46,26 @@ public class MapaActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public LatLng getLocation(){
-        LatLng loc = null;
+        LatLng fLatLng = null;
+        if(getLocGeoCoder() == null) fLatLng = new LatLng( 0,0 );
+        else fLatLng =getLocGeoCoder();
 
-        switch (location.toLowerCase()){
+        return fLatLng;
+    }
 
-            case "madrid":
-                loc = new LatLng( 40.4167, -3.70325 );
-                break;
-            case "barcelona":
-                loc = new LatLng( 41.3879, 2.16992 );
-                break;
-            case "sevilla":
-                loc = new LatLng( 37.3826, -5.99629 );
-                break;
-            case "oviedo":
-                loc = new LatLng( 43.36029, -5.84476 );
-                break;
+    public LatLng getLocGeoCoder(){
+        Geocoder gC = new Geocoder( this );
+        LatLng llng = null;
+        try {
+            List<Address> llngList = gC.getFromLocationName( location,1 );
+
+            double lat =llngList.get( 0 ).getLatitude();
+            double lng = llngList.get( 0 ).getLongitude();
+            llng = new LatLng( lat,lng );
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        return loc;
+        return llng;
     }
 }
