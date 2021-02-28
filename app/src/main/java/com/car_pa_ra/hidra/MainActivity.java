@@ -104,6 +104,9 @@ public class MainActivity extends AppCompatActivity
             case "about":
                 selectedFragment = new AboutFragment();
                 break;
+            case "helpme":
+                selectedFragment = new HelpFragment();
+                break;
             case "logout":
                 fba.signOut();
                 Intent i = new Intent(this, LoginActivity.class);
@@ -134,5 +137,17 @@ public class MainActivity extends AppCompatActivity
     public void logOut(View view) {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
+    }
+
+    public void helpme(View view) {
+        Fragment selectedFragment = new HelpFragment();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, selectedFragment)
+                .addToBackStack(null)
+                .commit();
+
+        dialog.dismiss();
     }
 }

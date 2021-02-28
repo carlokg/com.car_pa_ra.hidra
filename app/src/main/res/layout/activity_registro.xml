@@ -20,7 +20,7 @@
         android:layout_height="@dimen/dp104"
         android:layout_marginTop="@dimen/dp24"
         android:contentDescription="@string/foto_login"
-        app:srcCompat="@drawable/ic_launcher_ap_foreground"
+        app:srcCompat="@drawable/ic_image2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,5 +1,6 @@
 package com.car_pa_ra.hidra;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -28,6 +30,7 @@ class InfoGrupoFragment extends Fragment {
     TextView tvDescripcionGrupo;
     ImageView ivImagenGrupo;
     ImageView ivTipoGrupo;
+    LinearLayout llUbic;
 
     private MyViewModel viewModel;
 
@@ -55,9 +58,22 @@ class InfoGrupoFragment extends Fragment {
         tvTipoGrupo = view.findViewById(R.id.tvTipoGrupo);
         ivTipoGrupo = view.findViewById(R.id.ivTipoGrupo);
         tvDescripcionGrupo = view.findViewById(R.id.tvDescripcionGrupo);
+        llUbic = view.findViewById(R.id.llUbic);
 
         viewModel = ViewModelProviders.of((FragmentActivity) getActivity()).get(MyViewModel.class);
-        Grupos gAc = viewModel.getG();
+        final Grupos gAc = viewModel.getG();
+
+        llUbic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), MapaActivity.class);
+                i.putExtra( "LOCATION", gAc.getUbicacion() );
+                startActivity(i);
+            }
+        });
+
+
+
 
         if(gAc.getAyuSoc().toLowerCase().equals("ayuda")){
             Glide.with(ivTipoGrupo.getContext())

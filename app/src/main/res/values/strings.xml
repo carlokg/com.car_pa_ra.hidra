@@ -5,7 +5,7 @@
     <string name="hint_email">Correo electrónico</string>
     <string name="hint_pw">Contraseña</string>
     <string name="hint_pw2">Repetir contraseña</string>
-    <string name="hint_dir">Ciudad</string>
+    <string name="hint_dir">Localización (Ciudad/CP/Barrio)</string>
     <string name="hint_desc">Cuéntanos un poco sobre tí</string>
     <string name="btn_registro">Regístrate</string>
     <string name="tv_iniciar">Iniciar Sesión</string>
@@ -50,7 +50,6 @@
     <string name="tvUbicacionEjemplo">Madrid</string>
     <string name="tvDescripcionEjemplo">Aquí mostraremos la descripción del grupo donde los usuario podrán describir brevemente que se hará en estos grupos e incluir lugare de reunión y horarios.</string>
     <string name="tvTipoGrupoEjemplo">Ayuda</string>
-    <string name="et_ubi_grupo">Ubicacion del grupo</string>
     <string name="et_tipo_grupo">Tipo del grupo</string>
     <string name="et_dec_grupo">Descripcion del grupo</string>
     <string name="et_nom_grupo">Nombre del grupo</string>
@@ -58,4 +57,13 @@
     <string name="carlos">Carlos</string>
     <string name="pablo">Pablo</string>
     <string name="raul">Raúl</string>
+    <string name="help">Términos de uso</string>
+    <string name="politica">Política de privacidad</string>
+    <string name="seguridad">Consejos de seguridad Hidra</string>
+    <string name="frecuentes">Preguntas Frecuentes</string>
+    <string name="normas">Reglas de convivencia en Hidra</string>
+    <string name="twitter">Hidra en Twitter</string>
+    <string name="version">Versión:</string>
+    <string name="version_n">1.7.2</string>
+    <string name="f_ayuda">Ayuda</string>
 </resources>

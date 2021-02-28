@@ -253,7 +253,6 @@
              android:textColor="@color/colorPrimarioOscuro"
              android:layout_marginStart="@dimen/dp8"
              android:layout_marginEnd="@dimen/dp8"/>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,7 @@ public class AboutFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_about, container, false);
+
         imgr = view.findViewById(R.id.img3);
         imgc = view.findViewById(R.id.img2);
         imgp = view.findViewById(R.id.img1);
