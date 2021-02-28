@@ -88,7 +88,7 @@ public class CrearGrupoActivity extends AppCompatActivity {
                 etUbiG.getEditText().getText().toString().isEmpty()||
                 etTipoG.getEditText().getText().toString().isEmpty()){
 
-            Toast.makeText(this, String.valueOf(R.string.no_data),
+            Toast.makeText(this, R.string.no_data,
                     Toast.LENGTH_LONG).show();
         } else{
             final StorageReference fotoRef = mFotoStorageRef
@@ -114,12 +114,12 @@ public class CrearGrupoActivity extends AppCompatActivity {
                                 downloadUri.toString(), nomG, descG, tipoG, ubiG);
                         myRef.child(tglCheck+"_"+nomG)
                                 .setValue(g);
-                    }
+                    } else finish();
                 }
             });
 
         }
-        finish();
+
     }
 
     public void adjuntarFoto(View view) {
