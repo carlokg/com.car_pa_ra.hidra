@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -33,7 +35,8 @@ public class CrearGrupoActivity extends AppCompatActivity {
     TextInputLayout etNomG;
     TextInputLayout etDescG;
     TextInputLayout etTipoG;
-    ToggleButton swtAS;
+    TextInputLayout etUbiG;
+    Switch swtAS;
 
     Uri selectedUri;
     StorageReference mFotoStorageRef;
@@ -49,11 +52,25 @@ public class CrearGrupoActivity extends AppCompatActivity {
         etNomG = findViewById(R.id.etNomGrupo);
         etDescG = findViewById(R.id.etDescGrupo);
         etTipoG = findViewById(R.id.etTipoGrupo);
+        etUbiG = findViewById( R.id.etUbiGrupo );
         swtAS = findViewById(R.id.tglbtnAS);
 
          myRef = FirebaseDatabase.getInstance().getReference("datos").child("grupo");
          mFotoStorageRef = FirebaseStorage.getInstance().getReference()
                 .child("FotosGrupos");
+
+        Glide.with(imgGrupo.getContext())
+                .load(R.drawable.ic_img)
+                .into(imgGrupo);
+
+        swtAS.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(isChecked) swtAS.setText( R.string.ayuda );
+                else swtAS.setText( R.string.social );
+            }
+        });
+
     }
 
 
@@ -61,15 +78,16 @@ public class CrearGrupoActivity extends AppCompatActivity {
         final String nomG = etNomG.getEditText().getText().toString().trim();
         final String descG = etDescG.getEditText().getText().toString().trim();
         final String tipoG = etTipoG.getEditText().getText().toString().trim();
+        final String ubiG = etUbiG.getEditText().getText().toString().trim();
 
         final String tglCheck;
 
-        if(swtAS.isChecked()) tglCheck = "Ayuda";
+        if(swtAS.isChecked())tglCheck = "Ayuda";
         else  tglCheck = "Social";
 
 
         if(etNomG.getEditText().getText().toString().isEmpty()){
-            Toast.makeText(this, R.string.introduce_datos,
+            Toast.makeText(this, String.valueOf( R.string.crear_g_no_data ),
                     Toast.LENGTH_LONG).show();
         } else{
             final StorageReference fotoRef = mFotoStorageRef
@@ -92,7 +110,7 @@ public class CrearGrupoActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Uri downloadUri = task.getResult();
                         Grupos g = new Grupos(tglCheck,
-                                downloadUri.toString(), nomG, descG, tipoG);
+                                downloadUri.toString(), nomG, descG, tipoG, ubiG);
                         myRef.child(tglCheck+"_"+nomG)
                                 .setValue(g);
                     }

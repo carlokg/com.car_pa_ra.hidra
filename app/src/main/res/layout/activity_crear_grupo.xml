@@ -10,10 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
-
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etNomGrupo"
             android:layout_width="match_parent"
@@ -26,7 +22,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre del grupo"
+                android:hint="@string/et_nom_grupo"
                 android:fontFamily="@font/catamaran_extralight"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -44,7 +40,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Descripcion del grupo"
+                android:hint="@string/et_dec_grupo"
                 android:fontFamily="@font/catamaran_extralight"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -62,54 +58,61 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tipo del grupo"
+                android:hint="@string/et_tipo_grupo"
                 android:fontFamily="@font/catamaran_extralight"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ToggleButton
-            android:id="@+id/tglbtnAS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etTipoGrupo"
-            android:layout_marginLeft="@dimen/dp16"
-            android:layout_centerHorizontal="true"
-            android:textOn="@string/ayuda"
-            android:fontFamily="@font/catamaran_medium"
-            android:textOff="@string/social"
-            android:textColor="@color/white"
-
-            android:background="@color/colorAcento"/>
-
-        <LinearLayout
-            android:id="@+id/llFoto"
-            android:orientation="horizontal"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etUbiGrupo"
             android:layout_width="match_parent"
-            android:layout_below="@id/tglbtnAS"
-            android:layout_marginTop="16dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etTipoGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_ubi_grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageButton
-                android:id="@+id/ibAdjuntarFoto"
+            <Switch
+                android:id="@+id/tglbtnAS"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_add"
-                android:background="@color/white"
-                android:onClick="adjuntarFoto"/>
+                android:text="@string/social"
+                android:layout_below="@id/etUbiGrupo"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:textSize="@dimen/sp24"
+                android:switchPadding="@dimen/dp16"
+                android:trackTint="@color/colorAcento"
+                android:fontFamily="@font/catamaran_extralight"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             <ImageView
                 android:id="@+id/ivFoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"/>
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_centerHorizontal="true"
+                android:onClick="adjuntarFoto"
+                android:layout_below="@id/tglbtnAS"
+                tools:srcCompat="@drawable/ic_img" />
 
-        </LinearLayout>
 
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/llFoto"
+            android:layout_below="@id/ivFoto"
             android:layout_marginTop="@dimen/dp32"
             android:onClick="crearGrupo"
             style="@style/HidraButton"

@@ -14,9 +14,11 @@ import com.car_pa_ra.hidra.model.Grupos;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder>
+        implements View.OnClickListener{
 
     private List<Grupos> items;
+    private View.OnClickListener listener;
 
     public static class GrupoViewHolder extends RecyclerView.ViewHolder{
 
@@ -45,8 +47,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
     public GrupoViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.card, viewGroup, false);
+
+        v.setOnClickListener( listener );
         return new GrupoViewHolder(v);
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.GrupoViewHolder holder, int position) {
@@ -56,6 +62,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder> {
         holder.titulo.setText(items.get(position).getTitulo());
         holder.descripcion.setText(items.get(position).getDescripcion());
         holder.tipo.setText(items.get(position).getTipo());
+    }
+
+    public void setListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public
+    void onClick(View view) {
+        if(listener !=null){
+            listener.onClick(view);
+        }
     }
 
     @Override
