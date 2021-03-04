@@ -17,9 +17,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.MyViewModel;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 
 /**
  * @author Raúl

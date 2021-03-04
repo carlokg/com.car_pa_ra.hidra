@@ -7,11 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -50,8 +48,6 @@ public class LoginActivity extends AppCompatActivity {
             etPw = findViewById(R.id.etPw);
             fba = FirebaseAuth.getInstance();
             user = fba.getCurrentUser();
-
-            //Glide.with(this).load(R.drawable.ic_perfil3c).into(imgLogin);
 
             if (user != null) {
                 etNomUsuario.getEditText().setText(user.getEmail());
