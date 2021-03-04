@@ -1,6 +1,6 @@
-#**HIDRA**
+**HIDRA**
 
-[proyecto en github](https://github.com/carlokg/com.car_pa_ra.hidra.git)
+
 
 
 * **Splash** Ventana de carga de la aplicación, cuenta con una animación de fondo de la galaxia 
