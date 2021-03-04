@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
 /**
  * @author Raúl
  * @author Pablo
@@ -21,7 +22,11 @@ import com.google.firebase.auth.FirebaseAuth;
  * Todos los fragmentos de la aplicación, de tal forma que la barra estará presente en
  * todos los Fragmentos.
  * @see MainActivity
- * @see AboutFragment
+ * @see ExploraFragment
+ * @see PerfilFragment
+ * @see SocialFragment
+ * @see AyudaFragment
+ *
  *
  */
 public class MainActivity extends AppCompatActivity
