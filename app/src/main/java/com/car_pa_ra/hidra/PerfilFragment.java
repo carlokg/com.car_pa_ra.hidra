@@ -23,6 +23,20 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Contendrá la imagen del usuario y su foto,
+ * todos los datos se recogen de la base de datos Firebase.
+ * Si se pulsa sobre la ubicación, se abrirá MapaAcivity.
+ *
+ * @see MainActivity
+ * @see MapaActivity
+ *
+ */
+
 
 public class PerfilFragment  extends Fragment {
 

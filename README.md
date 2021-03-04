@@ -32,6 +32,12 @@ y tiene el nombre de la aplicación sobre la animación.
             se recogen de la base de datos Firebase. Si se pulsa sobre la ubicación, se abrirá
             MapaAcivity.
                 *  **MapaActivity** Activity en el cual se carga el mapa, con la ubiccación
+                            de la ciudad del usuario.
+            *  **InfoGrupoActivity** Fragmento que se carga sobre MainActivity al pulsar en una de
+             las cards del RecyclerView de una de: SocialFragment, AyudaFragment o ExploraFragment.
+             Contiene la informacion del grupo seleccionado en las vistas anteriormente mencionadas.
+             Si se pulsa sobre la ubicación, se abrirá MapaActivity..
+                *  **MapaActivity** Activity en el cual se carga el mapa, con la ubiccación
                 de la ciudad del usuario.
             *  **Ajustes** Al pulsar sobre el botón de ajustes, se abrirá una ventana emergente
             con diferentes opciones de ajustes e información.
@@ -40,7 +46,12 @@ y tiene el nombre de la aplicación sobre la animación.
                 iniciar sesión o crear cuenta.
                 *  **AboutFragment** Si se pulsa sobre este elemento de la ventana emergente,
                 se cargará un fragmento con información de los desarrolladores.
+                *  **HelpFragment** Fragmento que contiene información de contacto sobre la app,
+                asi como tutoriales sobre la app y terminos legales.
                 
 *    **Capturas de la app:**
 
-![](img/sc_hidra_splash.png)  ![](img/sc_hidra_login.png) | ![](img/sc_hidra_registro.png)
+![](img/sc_hidra_splash.png)  ![](img/Login.png)  ![](img/Registro.png)  ![](img/Explora.png)
+![](img/CrearGrupo.png)  ![](img/Social.png)  ![](img/Ayuda.png)  ![](img/GrupoCorrer.png)
+![](img/GrupoJardinero.png)   ![](img/GrupoYoga.png)  ![](img/GrupoMecanico.png)  ![](img/Perfil.png)
+![](img/mapa1.png)  ![](img/Ajustes.png)  ![](img/About.png)  ![](img/Help.png)

@@ -8,6 +8,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Ventana de carga de la aplicación, cuenta con una animación de fondo de la galaxia
+ * y tiene el nombre de la aplicación sobre la animación.
+ *
+ * @see InfoGrupoFragment
+ * @see PerfilFragment
+ *
+ */
+
 
 public class SplashActivity extends AppCompatActivity {
 

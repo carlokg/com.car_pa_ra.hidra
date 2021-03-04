@@ -29,6 +29,21 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ *Fragmento que carga sobre el MainActivity al pulsar el botón correspondiente.
+ * Contendrá lo mismo que ExploraFragment,
+ * pero filtrará solamente las tarjetas de los grupos clasificados como 'Ayuda'.
+ *
+ * @see MainActivity
+ * @see MapaActivity
+ *
+ */
+
+
 public class AyudaFragment extends Fragment {
     private RecyclerView recycler;
     private Adapter adapter;

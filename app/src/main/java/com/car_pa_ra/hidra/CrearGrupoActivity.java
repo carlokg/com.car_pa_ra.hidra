@@ -26,6 +26,18 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ *Activity que se carga al pulsar sobre el botón flotante del MainActivity,
+ * en el se introducen los datos e imagen de un grupo nuevo y al pulsar sobre el botón crear,
+ * se crea un nuevo grupo en la base de datos de Firebase.
+ *
+ * @see MapaActivity
+ */
+
 
 public class CrearGrupoActivity extends AppCompatActivity {
 

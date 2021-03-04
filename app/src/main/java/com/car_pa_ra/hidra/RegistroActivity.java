@@ -26,6 +26,21 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Ventana con campos editables para introducir los datos de la cuenta de usuario,
+ * al aceptar se creará un usuario en la base de datos Firebase.
+ * Y se accederá a la vista principal (MainActivity), dónde se cargarán las diferentes vistas.
+ *
+ * @see MainActivity
+ * @see LoginActivity
+ *
+ */
+
+
 public class RegistroActivity extends AppCompatActivity {
 
     private static final int RC_PHOTO_ADJ = 555;

@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,7 +18,6 @@ import android.widget.Toast;
 import com.car_pa_ra.hidra.model.Grupos;
 import com.car_pa_ra.hidra.recyclerUtil.Adapter;
 import com.car_pa_ra.hidra.recyclerUtil.MyViewModel;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,8 +26,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ *Fragmento que carga sobre el MainActivity al pulsar el botón correspondiente.
+ * El cual contiene un RecyclerView donde se cargarán automáticamente todas
+ * las CardView de los grupos, tanto de 'Social' como de 'Ayuda'.
+ *
+ * @see MainActivity
+ * @see CrearGrupoActivity
+ * @see InfoGrupoFragment
+ *
+ */
 
 public class ExploraFragment extends Fragment{
 
@@ -56,6 +66,7 @@ public class ExploraFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_explora, container, false);
+
 
         dbRef = FirebaseDatabase.getInstance()
                 .getReference("datos/grupo");
@@ -120,8 +131,8 @@ public class ExploraFragment extends Fragment{
                         g = dss.getValue(Grupos.class);
                         lGrupos.add(g);
                     }
-
                     cargarListaGrupos();
+
                 }
 
                 @Override

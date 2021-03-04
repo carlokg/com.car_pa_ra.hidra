@@ -12,6 +12,18 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Si se pulsa sobre este elemento de la ventana emergente,
+ * se cargará un fragmento con información de los desarrolladores.
+ *
+ * @see MapaActivity
+ */
+
+
 public class AboutFragment extends Fragment {
 
    ImageView imgp;

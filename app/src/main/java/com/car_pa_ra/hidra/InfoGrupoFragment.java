@@ -21,6 +21,22 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Fragmento que se carga sobre MainActivity al pulsar en una de las cards
+ * del REcyclerView de una de: SocialFragment, AyudaFragment o ExploraFragment.
+ * Contiene la informacion del grupo seleccionado en las vistas anteriormente mencionadas.
+ * Si se pulsa sobre la ubicación, se abrirá MapaActivity.
+ *
+ * @see MapaActivity
+ * @see SocialFragment
+ * @see AyudaFragment
+ * @see ExploraFragment
+ *
+ */
 public
 class InfoGrupoFragment extends Fragment {
 

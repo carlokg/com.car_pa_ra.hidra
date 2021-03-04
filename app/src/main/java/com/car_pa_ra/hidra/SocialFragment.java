@@ -28,6 +28,20 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ *Fragmento que carga sobre el MainActivity al pulsar el botón correspondiente.
+ * Contendrá lo mismo que ExploraFragment,
+ * pero filtrará solamente las tarjetas de los grupos clasificados como 'Social'.
+ *
+ * @see MainActivity
+ * @see MapaActivity
+ *
+ */
+
 public class SocialFragment extends Fragment {
 
     private RecyclerView recycler;

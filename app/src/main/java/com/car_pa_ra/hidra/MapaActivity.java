@@ -16,6 +16,18 @@ import java.util.List;
 
 import androidx.fragment.app.FragmentActivity;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Activity en el cual se carga el mapa, con la ubiccación de la ciudad del usuario.
+ *
+ * @see InfoGrupoFragment
+ * @see PerfilFragment
+ *
+ */
+
 public class MapaActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;

@@ -8,6 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Fragmento que contiene información de contacto sobre la app, asi como tutoriales sobre
+ * la app y terminos legales.
+ *
+ * @see InfoGrupoFragment
+ * @see PerfilFragment
+ *
+ */
+
 
 public class HelpFragment extends Fragment {
 

@@ -19,6 +19,19 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * @author Raúl
+ * @author Pablo
+ * @author Carlos
+ *
+ * Ventana principal para logearse, desde aquí se puede iniciar sesión o pasar
+ * a la pantalla de registro me diante dos botones. Recordará el último usuario logeado.
+ *
+ * @see MainActivity
+ * @see RegistroActivity
+ *
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
         ImageView imgLogin;

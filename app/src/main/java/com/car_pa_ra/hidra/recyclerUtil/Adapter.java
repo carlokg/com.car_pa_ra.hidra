@@ -12,6 +12,7 @@ import com.car_pa_ra.hidra.R;
 import com.car_pa_ra.hidra.model.Grupos;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder>
@@ -75,6 +76,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.GrupoViewHolder>
             listener.onClick(view);
         }
     }
+
 
     @Override
     public int getItemCount() {
