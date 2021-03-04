@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HelpFragment"
+    android:padding="@dimen/dp16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp32"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="@string/f_ayuda"
+            />
+
+        <TextView
+            android:id="@+id/tvTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp32"
+            app:layout_constraintTop_toBottomOf="@id/tvHelp"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:text="@string/help"
+            />
+        <View
+            android:id="@+id/divider1"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTerminos" />
+        <TextView
+            android:id="@+id/tvPolitica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:layout_marginTop="@dimen/dp16"
+            android:text="@string/politica"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            />
+        <View
+            android:id="@+id/divider2"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPolitica" />
+        <TextView
+            android:id="@+id/tvSeguridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:text="@string/seguridad"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            />
+        <View
+            android:id="@+id/divider3"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSeguridad" />
+        <TextView
+            android:id="@+id/tvFrecuentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:text="@string/frecuentes"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            />
+        <View
+            android:id="@+id/divider4"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFrecuentes" />
+        <TextView
+            android:id="@+id/tvNormas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:text="@string/normas"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            />
+        <View
+            android:id="@+id/divider5"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNormas" />
+        <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            android:text="@string/twitter"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            />
+
+        <View
+            android:id="@+id/divider6"
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTwitter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp16"
+            app:layout_constraintTop_toBottomOf="@id/divider6">
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp24"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:fontFamily="@font/catamaran_light"
+                android:text="@string/version"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/tvVersionN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp24"
+                android:layout_marginEnd="@dimen/dp4"
+                android:textColor="@color/colorPrimarioOscuro"
+                android:fontFamily="@font/catamaran_extralight"
+                android:text="@string/version_n"
+                android:textAlignment="viewEnd"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</FrameLayout>

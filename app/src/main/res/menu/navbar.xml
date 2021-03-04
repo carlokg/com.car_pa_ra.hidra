@@ -12,7 +12,7 @@
     <item
         android:id="@+id/perfil"
         android:title="@string/perfil"
-        android:icon="@drawable/ic_appbar_perfil"/>
+        android:icon="@drawable/ic_perfil3c"/>
     <item
         android:id="@+id/ayuda"
         android:title="@string/ayuda"

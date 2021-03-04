@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Hidra</string>
+    <string name="app_name">HIDRA</string>
     <string name="foto_login">Foto login</string>
     <string name="hint_nombre_usuario">Nombre de usuario</string>
     <string name="hint_email">Correo electrónico</string>
     <string name="hint_pw">Contraseña</string>
     <string name="hint_pw2">Repetir contraseña</string>
-    <string name="hint_dir">Dirección</string>
+    <string name="hint_dir">Localización (Ciudad/CP/Barrio)</string>
     <string name="hint_desc">Cuéntanos un poco sobre tí</string>
     <string name="btn_registro">Regístrate</string>
     <string name="tv_iniciar">Iniciar Sesión</string>
@@ -15,15 +15,55 @@
     <string name="perfil">Perfil</string>
     <string name="ayuda">Ayuda</string>
     <string name="ajustes">Ajustes</string>
-    <string name="no_data">Debe introducir un email y una contraseña</string>
+    <string name="no_data">Debe introducir todos los datos</string>
     <string name="msj_no_accede">No se ha podido acceder</string>
     <string name="msj_registrado">Usuario registrado</string>
     <string name="msj_no_registrado">No se ha podido registrar el usuario</string>
     <string name="msj_pw_iguales">Las contraseñas introducidas no coinciden</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_about">About Us</string>
-    <string name="btn_logout">Log out</string>
+    <string name="btn_logout">Cerrar sesión</string>
     <string name="btn_help">Ayuda</string>
-    <string name="content_about_us">La idea es poner en contacto a gente utilizando principalmente la ubicación y la cercanía entre los usuarios. Se podrá establecer un radio máximo para ver los anuncios empleando un filtro. Se podrán crear tres tipos de grupos con enfoques diferentes: Ayudante (prestará servicio de ayuda a otro usuario), Solicitante de ayuda (Solicitará ayuda a cualquier usuario de la aplicación que se preste a ello), Grupo social (Para compartir aficiones comunes como actividades deportivas, culturales, o cualquier tipo de afición)</string>
+    <string name="content_about_us">Somos Pablo López, Carlos García y Raúl García, estudiantes de
+        la Universidad Europea en el campus de Alcobendas.
+        \nHemos desarrollado esta aplicación como proyecto integrador del ciclo formativo de
+        Desarrollo de Aplicaciones Multiplataforma, en el curso de 2019/2021.
+        \nHa sido una experiencia genial y estamos muy contentos con los resultados obtenidos en
+        la aplicación, tanto a nivel funcional como de diseño. Pensamos que con algún retoque
+        podría ser una aplicación muy útil.
+        \nAgradecer a los profesores Pilar Martín y Ernesto Ramiro la formación y ayuda prestada
+        para que este proyecto haya sido posible.
+    </string>
+    <string name="img_tarjeta">imagen tarjeta</string>
+    <string name="title">Titulo</string>
+    <string name="secondary_text">Descripcion</string>
+    <string name="deporte">Deporte</string>
+    <string name="txt_notificaciones">Notificaciones</string>
+    <string name="cerrar_dialogo">Cerrar ajustes</string>
+    <string name="descripcion">Descripción</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="crear_grupo">Crear Grupo</string>
+    <string name="introduce_datos">Debe de introducir un nombre, una descripcion y un tipo</string>
+    <string name="error_lectura">No se ha podido leer el dato</string>
+    <string name="crear">crear</string>
+    <string name="nombreGrupo">Nombre grupo</string>
+    <string name="tvUbicacionEjemplo">Madrid</string>
+    <string name="tvDescripcionEjemplo">Aquí mostraremos la descripción del grupo donde los usuario podrán describir brevemente que se hará en estos grupos e incluir lugare de reunión y horarios.</string>
+    <string name="tvTipoGrupoEjemplo">Ayuda</string>
+    <string name="et_tipo_grupo">Tipo del grupo</string>
+    <string name="et_dec_grupo">Descripcion del grupo</string>
+    <string name="et_nom_grupo">Nombre del grupo</string>
+    <string name="crear_g_no_data">Debe introducir un nombre</string>
+    <string name="carlos">Carlos</string>
+    <string name="pablo">Pablo</string>
+    <string name="raul">Raúl</string>
+    <string name="help">Términos de uso</string>
+    <string name="politica">Política de privacidad</string>
+    <string name="seguridad">Consejos de seguridad Hidra</string>
+    <string name="frecuentes">Preguntas Frecuentes</string>
+    <string name="normas">Reglas de convivencia en Hidra</string>
+    <string name="twitter">Hidra en Twitter</string>
+    <string name="version">Versión:</string>
+    <string name="version_n">1.7.2</string>
+    <string name="f_ayuda">Ayuda</string>
 </resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp16"
+    tools:context=".CrearGrupoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etNomGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_nom_grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDescGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etNomGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_dec_grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etTipoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etDescGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/et_tipo_grupo"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etUbiGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/etTipoGrupo"
+            android:layout_margin="@dimen/dp16"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_dir"
+                android:fontFamily="@font/catamaran_extralight"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <Switch
+                android:id="@+id/tglbtnAS"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social"
+                android:layout_below="@id/etUbiGrupo"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:textSize="@dimen/sp24"
+                android:switchPadding="@dimen/dp16"
+                android:trackTint="@color/colorAcento"
+                android:fontFamily="@font/catamaran_extralight"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <ImageView
+                android:id="@+id/ivFoto"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_centerHorizontal="true"
+                android:onClick="adjuntarFoto"
+                android:layout_below="@id/tglbtnAS"
+                tools:srcCompat="@drawable/ic_img" />
+
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivFoto"
+            android:layout_marginTop="@dimen/dp32"
+            android:onClick="crearGrupo"
+            style="@style/HidraButton"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="@string/crear"/>
+    </RelativeLayout>
+</ScrollView>

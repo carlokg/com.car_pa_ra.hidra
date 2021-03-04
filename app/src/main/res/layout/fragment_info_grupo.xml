@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InfoGrupoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvNombreGrupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/dp16"
+            android:text="@string/nombreGrupo"
+            android:textSize="@dimen/sp32"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorAcento"
+            android:fontFamily="@font/catamaran_medium"
+            />
+
+        <ImageView
+            android:id="@+id/ivTipoGrupo"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/sp24"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp8"
+            app:layout_constraintStart_toEndOf="@+id/tvNombreGrupo"
+            app:layout_constraintBottom_toTopOf="@id/llGrupo"
+            app:tint="@color/colorAcento" />
+
+        <LinearLayout
+            android:id="@+id/llGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreGrupo"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llUbic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp16"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/location"
+                    android:layout_marginLeft="@dimen/dp16"/>
+
+                <TextView
+                    android:id="@+id/tvUbicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvUbicacionEjemplo"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:textSize="@dimen/sp16"
+                    android:textColor="@color/colorPrimarioOscuro"
+                    android:fontFamily="@font/catamaran_medium"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvTipoGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_margin="@dimen/dp16"
+                android:text="@string/tvTipoGrupoEjemplo"
+                android:textSize="@dimen/sp16"
+                android:textColor="@color/colorAcento"
+                android:fontFamily="@font/catamaran"
+                android:gravity="end"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivImagenGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp240"
+            app:layout_constraintTop_toBottomOf="@+id/llGrupo"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginHorizontal="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvDescripcionGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ivImagenGrupo"
+            android:layout_margin="@dimen/dp16"
+            android:text="@string/tvDescripcionEjemplo"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/colorPrimarioOscuro"
+            android:fontFamily="@font/catamaran_light"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

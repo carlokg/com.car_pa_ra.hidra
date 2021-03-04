@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".Registro">
+    tools:context=".RegistroActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -20,9 +20,11 @@
         android:layout_height="@dimen/dp104"
         android:layout_marginTop="@dimen/dp24"
         android:contentDescription="@string/foto_login"
+        app:srcCompat="@drawable/ic_image2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="adjuntarFotoUser"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etNomUsuario"
@@ -134,7 +136,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp160"
+            android:layout_height="@dimen/dp152"
             android:hint="@string/hint_desc"
             android:gravity="start"
             android:scrollbars="vertical"
@@ -151,7 +153,8 @@
         android:layout_margin="@dimen/dp16"
         app:strokeColor="@color/colorAcento"
         android:textColor="@color/colorAcento"
-        style="@style/boton_reg">
+        style="@style/boton_reg"
+        android:onClick="btnRegistrar">
     </com.google.android.material.button.MaterialButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

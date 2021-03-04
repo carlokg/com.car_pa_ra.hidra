@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Login">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imgLogin"
         android:layout_width="@dimen/dp96"
         android:layout_height="@dimen/dp96"
-        android:layout_marginTop="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp40"
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_perfil3c"/>
 
     <TextView
         android:id="@+id/tvInicio"
@@ -101,3 +110,4 @@
         app:strokeColor="@color/colorAcento" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

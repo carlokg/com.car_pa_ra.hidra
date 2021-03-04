@@ -18,6 +18,16 @@
     <dimen name="dp80">80dp</dimen>
     <dimen name="dp96">96dp</dimen>
     <dimen name="dp88">88dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp208">208dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp56">56dp</dimen>
+    <dimen name="dp248">248dp</dimen>
+    <dimen name="dp152">152dp</dimen>
+    <dimen name="dp400">400dp</dimen>
+    <dimen name="dp320">320dp</dimen>
+    <dimen name="dp64">64dp</dimen>
 
 
 </resources>
