@@ -23,7 +23,8 @@
         android:contentDescription="@string/foto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_perfil3c"/>
 
     <TextView
         android:id="@+id/tvInicio"

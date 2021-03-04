@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             fba = FirebaseAuth.getInstance();
             user = fba.getCurrentUser();
 
-            Glide.with(this).load(R.drawable.ic_perfil3c).into(imgLogin);
+            //Glide.with(this).load(R.drawable.ic_perfil3c).into(imgLogin);
 
             if (user != null) {
                 etNomUsuario.getEditText().setText(user.getEmail());
