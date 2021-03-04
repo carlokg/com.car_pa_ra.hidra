@@ -50,8 +50,12 @@ y tiene el nombre de la aplicación sobre la animación.
                 asi como tutoriales sobre la app y terminos legales.
                 
 *    **Capturas de la app:**
-
+-----------------------------------------------------------------------------------------
 ![](img/sc_hidra_splash.png)  ![](img/Login.png)  ![](img/Registro.png)  ![](img/Explora.png)
+-----------------------------------------------------------------------------------------
 ![](img/CrearGrupo.png)  ![](img/Social.png)  ![](img/Ayuda.png)  ![](img/GrupoCorrer.png)
+-----------------------------------------------------------------------------------------
 ![](img/GrupoJardinero.png)   ![](img/GrupoYoga.png)  ![](img/GrupoMecanico.png)  ![](img/Perfil.png)
+-----------------------------------------------------------------------------------------
 ![](img/mapa1.png)  ![](img/Ajustes.png)  ![](img/About.png)  ![](img/Help.png)
+-----------------------------------------------------------------------------------------
